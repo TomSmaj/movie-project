@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "node-handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
@@ -25,5 +26,30 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
+=======
+  "name": "movie-project",
+  "version": "1.0.0",
+  "description": "MOVIE PROJECT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomSmaj/movie-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomSmaj/movie-project/issues"
+  },
+  "homepage": "https://github.com/TomSmaj/movie-project#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
+>>>>>>> 8fe8075c00b7c17da604d0804ac9ddcbc035c61d
   }
 }
