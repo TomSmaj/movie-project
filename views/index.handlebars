@@ -1,28 +1,21 @@
-  <!-- All Discussion Groups -->
+{{!-- Name for database query variable = club   --}}
+  
+
+  <!-- All Movie Clubs -->
   <div class="container">
     <div class="section">
 
-      <!--   Discussion Card   -->
-      <a href="club/{{this.id}}">
-      <div class="container discussion">
-        <div class="row">
-          <div class="col l1 s1 offset-1 film-strip"></div>
-          <div class="col l7 s7">
-            <h4 class="black-text">Group Name </h4>
-            <h5>Now Showing:</h5>
-            <p>Current Movie Being Discussed</p>
-            <h5>Discussion starts:</h5>
-            <p>MM/DD</p>
-          </div>
-          <div class="col l4 s4 valign-wrapper" id="poster">
-            <img class="responsive-img poster" src="./css/images/suspiria.jpg">
-          </div>
-        </div>
-      </div>
-      </a>
+      <!--   Movie Club Card   -->
+      <ul>
+      {{#each club}}
+
+      {{/each }}
+      </ul>
 
     </div>
   </div>
 
+{{!-- scripts --}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
