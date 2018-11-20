@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-    "extends": "airbnb"
-}
-=======
     "env": {
         "browser": true,
         "commonjs": true,
@@ -46,4 +42,3 @@
         "prettier/prettier": "error"
     }
 }
->>>>>>> dd9b6fd51fb8c14ba6a4bba5e65abf3ef3a9f0fb
