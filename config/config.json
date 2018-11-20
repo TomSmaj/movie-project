@@ -2,7 +2,11 @@
   "development": {
     "username": "root",
     "password": "root",
+<<<<<<< HEAD
     "database": "movies_db",
+=======
+    "database": "exampledb",
+>>>>>>> dd9b6fd51fb8c14ba6a4bba5e65abf3ef3a9f0fb
     "host": "localhost",
     "dialect": "mysql"
   },
