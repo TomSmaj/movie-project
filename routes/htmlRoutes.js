@@ -1,27 +1,33 @@
-const db = require("../models");
+// *********************************************************************************
+// html-routes.js - this file offers a set of routes for sending users to the various html pages
+// *********************************************************************************
 
+// Dependencies
+// =============================================================
+var path = require("path");
+
+// Routes
+// =============================================================
 module.exports = function(app) {
-  // Load index page
-  app.get("/", (req, res) => {
-    db.Example.findAll({}).then(dbExamples => {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+  // Each of the below routes just handles the HTML/handlebars page that the user gets sent to.
+
+  // index route loads view.html
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", (req, res) => {
-    db.Example.findOne({ where: { id: req.params.id } }).then(dbExample => {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  // cms route loads cms.html
+  app.get("/newGoup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/newGroup.handlebars"));
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", (req, res) => {
-    res.render("404");
+  // // blog route loads blog.html
+  // app.get("/blog", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/blog.html"));
+  // });
+
+  // authors route loads author-manager.html
+  app.get("/addMovie", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/addMovie.handlebars"));
   });
 };
