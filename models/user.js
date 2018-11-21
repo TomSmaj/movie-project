@@ -10,7 +10,7 @@ module.exports = function(sequelize, Sequelize) {
     });
     
     User.associate = function(models) {
-        User.belongsToMany(models.Group, {
+        User.belongsToMany(models.Club, {
             through: 'Group_User',
             foriegnKey: 'group_id'
         });

@@ -23,7 +23,7 @@ module.exports = function(sequelize, Sequelize) {
     // We're saying that a Discussion should belong to an Group
     // A Discussion can't be created without a Group due to the foreign key constraint
     // A Discussion also belong's to a User
-    Discussion.belongsTo(models.Group, {
+    Discussion.belongsTo(models.Club, {
       foreignKey: {
         allowNull: false
       }
