@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight|Righteous');
 
+html{
+  background-color: black;
+}
 
 
 .icon-block {
@@ -11,11 +14,11 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, .9) !important;
+  background-color: rgba(0, 0, 0, .9);
 }
 
 nav {
-  box-shadow: 0 5px rgb(255, 255, 255) !important;
+  box-shadow: 0 5px rgb(255, 255, 255) ;
 }
 
 .header {
@@ -23,7 +26,7 @@ nav {
 }
 
 .title {
-  font-family: 'Limelight', cursive !important;
+  font-family: 'Limelight', cursive ;
   color: #ebbb4a;
 }
 
@@ -46,4 +49,14 @@ margin-top: 5%;}
 #login-button{
   background-color: #ebbb4a;
   color: #c9252f;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }

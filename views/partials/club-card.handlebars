@@ -10,31 +10,32 @@ pervious movie discussion = prev_movie
         <div class="row">
             <div class="col l1 s1 offset-1 film-strip"></div>
             <div class="col l7 s7">
-                <h4 class="black-text">{{movie_club_name }} </h4>
+                <h4 class="black-text">{{group.name }} </h4>
                 <h5>Now Showing:</h5>
-                <p>{{current_movie}}</p>
+                <p>{{discussion.movie}}</p>
                 <h5>Discussion starts:</h5>
-                <p>current_movie_start</p>
+                <p>{{discussion.start_date}}</p>
             </div>
             <div class="col l4 s4 valign-wrapper" id="poster">
-                <img class="responsive-img poster" src="">
+                {{!-- ?? How to link image from url href ?? --}}
+                <img class="responsive-img poster" src="{{}}">
             </div>
         </div>
     </div>
 </a>
 
-
+{{#each }}
 {{!-- Now Showing --}}
 <a href="">
     <div class="container current_discussion">
         <div class="row">
             <div class="col l1 s1 offset-1 film-strip"></div>
             <div class="col l7 s7">
-                <h4 class="black-text">{{movie_club_name }} </h4>
+                <h4 class="black-text">{{group.name }} </h4>
                 <h5>Now Showing:</h5>
-                <p>{{current_movie}}</p>
+                <p>{{discussion.movie}}</p>
                 <h5>Discussion starts:</h5>
-                <p>current_movie_start</p>
+                <p>{{discussion.start_date}}</p>
             </div>
             <div class="col l4 s4 valign-wrapper" id="poster">
                 <img class="responsive-img poster" src="">
@@ -63,3 +64,5 @@ pervious movie discussion = prev_movie
         </div>
     </div>
 </a>
+
+{{/each }}
