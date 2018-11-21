@@ -3,29 +3,36 @@ const db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", (req, res) => {
-    db.Group.findAll({
+    db.Club.findAll({
       order: [["createdAt", "DESC"]]
-    }).then(dbGroups => {
+    }).then(dbClubs => {
       res.render("index", {
-        groups: dbGroups
+        clubs: dbClubs
       });
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/group/:group_id", (req, res) => {
-    // eslint-disable-next-line camelcase
-    db.Group.findOne({
+  app.get("/clubs/:club_id", (req, res) => {
+    db.Club.findOne({
       // eslint-disable-next-line camelcase
-      where: { group_id: req.params.group_id },
+      where: { club_id: req.params.club_id },
       include: [db.Discussion]
-    }).then(dbGroup => {
-      res.render("group", {
-        group: dbGroup
+    }).then(dbClub => {
+      res.render("club", {
+        club: dbClub
       });
     });
   });
 
+  app.post("/api/clubs", (req, res) => {
+    db.Club.create({
+      name: req.body.name,
+      description: req.body.description
+    }).then(dbClub => {
+      res.json(dbClub);
+    });
+  });
   // Render 404 page for any unmatched routes
   app.get("*", (req, res) => {
     res.render("404");

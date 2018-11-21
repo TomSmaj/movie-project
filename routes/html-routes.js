@@ -11,23 +11,18 @@ var path = require("path");
 module.exports = function(app) {
   // Each of the below routes just handles the HTML/handlebars page that the user gets sent to.
 
-  // index route loads view.html
+  // index route loads index.handlebars
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/index.handlebars"));
   });
 
-  // cms route loads cms.html
-  app.get("/newGoup", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/newGroup.handlebars"));
+  // add-club route loads add-club.handlebars
+  app.get("/add-club", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/add-club.handlebars"));
   });
 
-  // // blog route loads blog.html
-  // app.get("/blog", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/blog.html"));
-  // });
-
-  // authors route loads author-manager.html
-  app.get("/addMovie", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/addMovie.handlebars"));
+  // add-movie route loads add-movie.handlebars
+  app.get("/add-movie", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
   });
 };

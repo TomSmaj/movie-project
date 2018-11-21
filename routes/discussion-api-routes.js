@@ -1,13 +1,15 @@
+/* eslint-disable camelcase */
 const db = require("../models");
 
 module.exports = function(app) {
   // Load index page
   app.get("/discussion/:discussion_id", (req, res) => {
-    db.Discussion.findAll({
-      order: [["createdAt", "DESC"]]
-    }).then(dbGroups => {
-      res.render("index", {
-        groups: dbGroups
+    db.Discussion.findOne({
+      where: { discussion_id: req.params.discussion_id },
+      include: [db.Post]
+    }).then(dbDiscussion => {
+      res.render("discussion", {
+        discussion: dbDiscussion
       });
     });
   });

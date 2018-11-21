@@ -1,0 +1,27 @@
+
+{{!-- Add a new movie to discuss. This happens when you are already on a club's page. Potentially only for Moderator/Logged In User --}}
+
+<h2>Add a Movie</h2>
+
+
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Hidden Figures" id="newMovie" type="text" class="validate">
+                <label for="first_name">Next Movie to Discuss</label>
+            </div>
+            <div class="input-field col s6">
+                <input type="date" class="datepicker">
+                <label for="discussion_start">Discussion Starts:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="summary" type="text" class="validate">
+                <label for="summary">Plot Summary</label>
+            </div>
+        </div>
+        <button type="submit">Create Discussion</button>
+    </form>
+</div>
