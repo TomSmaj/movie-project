@@ -18,7 +18,7 @@ module.exports = function(sequelize, Sequelize) {
 
     Club.belongsToMany(models.User, {
       through: "ClubUser",
-      foriegnKey: {
+      foreignKey: {
         allowNull: false
       }
     });
