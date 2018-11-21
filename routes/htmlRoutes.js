@@ -17,7 +17,7 @@ module.exports = function(app) {
   });
 
   // cms route loads cms.html
-  app.get("/newGoup", function(req, res) {
+  app.get("/newGroup", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/newGroup.handlebars"));
   });
 
