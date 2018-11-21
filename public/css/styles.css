@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Limelight|Righteous');
+
+html{
+  background-color: black;
+}
+
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+body {
+  background-color: rgba(0, 0, 0, .9);
+}
+
+nav {
+  box-shadow: 0 5px rgb(255, 255, 255) ;
+}
+
+.header {
+  color: #f7ee8b;
+}
+
+.title {
+  font-family: 'Limelight', cursive ;
+  color: #ebbb4a;
+}
+
+.discussion{
+  background-color: #d1d2d4;
+}
+
+.poster{
+margin-top: 5%;}
+
+.film-strip{
+  background-color: black;
+}
+
+.row .col.s1{
+  height: 298px;
+  border: 2px solid white; 
+}
+
+#login-button{
+  background-color: #ebbb4a;
+  color: #c9252f;
+}
+
+footer{
+  bottom: 0;
+}
