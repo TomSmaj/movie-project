@@ -1,14 +1,13 @@
-function populateClubs() {
-  console.log("reached populateClubs");
-  /*
-  $.get("/clubs", function(data) {
-    console.log("Populating clubs: " + data);
-  });
-  */
-}
-
 $(document).ready(function() {
-  populateClubs();
+  console.log("index ready");
+});
+
+$(".club").on("click", function() {
+  console.log("clubId: " + $(this).attr("clubId") + " has been clicked.");
+  var clubid = $(this).attr("clubId");
+  $.get("/club/" + clubid, function() {
+    console.log("moving to club page of club with id " + clubid);
+  });
 });
 
 /*

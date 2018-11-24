@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+  // moved the load index to the HTML routes
   /*
   app.get("/", (req, res) => {
     db.Club.findAll({

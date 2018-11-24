@@ -14,7 +14,6 @@ module.exports = function(app) {
 
   // index route loads index.handlebars
   app.get("/", function(req, res) {
-    //res.sendFile(path.join(__dirname, "../views/index.handlebars"));
     db.Club.findAll({
       order: [["createdAt", "DESC"]]
     }).then(dbClubs => {
@@ -22,6 +21,20 @@ module.exports = function(app) {
         clubs: dbClubs
       });
     });
+  });
+
+  app.get("/club/:clubid", function(req, res) {
+    //this is where the Discussions db will be queried to find the discussion belonging to the club that has been clicked
+    /*
+    db.Discussion.findAll({
+      order: [["createdAt", "DESC"]]
+    }).then(dbDisc => {
+      res.render("index-2", {
+        clubs: dbDisc
+      });
+    });
+    */
+    res.render("club", {});
   });
 
   // add-club route loads add-club.handlebars
