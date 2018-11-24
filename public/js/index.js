@@ -1,3 +1,17 @@
+function populateClubs() {
+  console.log("reached populateClubs");
+  /*
+  $.get("/clubs", function(data) {
+    console.log("Populating clubs: " + data);
+  });
+  */
+}
+
+$(document).ready(function() {
+  populateClubs();
+});
+
+/*
 // Get references to page elements
 const $exampleText = $("#example-text");
 const $exampleDescription = $("#example-description");
@@ -97,3 +111,4 @@ const handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+*/
