@@ -24,6 +24,10 @@ nav {
   color: #f7ee8b;
 }
 
+.index-club-cards{
+  margin-bottom: 2%;
+}
+
 .title {
   font-family: 'Limelight', cursive ;
   color: #ebbb4a;
@@ -50,6 +54,7 @@ margin-top: 5%;}
 .current_discussion{
   height: auto;
   border: 2px solid white; 
+  margin-bottom: 2%;
 }
 
 .main-col{
