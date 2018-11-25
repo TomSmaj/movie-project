@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    console.log("reached club page");
-  });
+  console.log("reached club page");
+});
