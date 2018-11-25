@@ -37,18 +37,13 @@ nav {
   background-color: #d1d2d4;
 }
 
+.discussion{
+  text-align: center;
+}
+
 .discussion-title{
   color: white;
   font-family: 'Limelight', cursive;
-}
-
-.poster{
-margin-top: 5%;}
-
-.film-strip{
-  height: 50px;
-  overflow: auto;
-  background-color: black;
 }
 
 .current_discussion{
@@ -57,10 +52,24 @@ margin-top: 5%;}
   margin-bottom: 2%;
 }
 
+.poster{
+margin-top: 5%;
+}
+
+.film-strip{
+  height: 50px;
+  overflow: auto;
+  background-color: black;
+}
+
 .main-col{
 background-color: #d1d2d4;
 }
 
+.single-post{
+  background-color: #d1d2d4;
+  width: 70%;
+}
 
 #login-button{
   background-color: #ebbb4a;
