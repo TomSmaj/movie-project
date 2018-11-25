@@ -24,17 +24,13 @@ module.exports = function(app) {
   });
 
   app.get("/club/:clubid", function(req, res) {
-    //this is where the Discussions db will be queried to find the discussion belonging to the club that has been clicked
-    /*
     db.Discussion.findAll({
-      order: [["createdAt", "DESC"]]
+      where: { ClubClubId: req.params.clubid }
     }).then(dbDisc => {
-      res.render("index-2", {
-        clubs: dbDisc
+      res.render("club", {
+        discs: dbDisc
       });
     });
-    */
-    res.render("club", {});
   });
 
   // add-club route loads add-club.handlebars
