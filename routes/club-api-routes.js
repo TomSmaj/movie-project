@@ -14,6 +14,7 @@ module.exports = function(app) {
   });
   */
 
+  /*
   app.get("/clubs", (req, res) => {
     db.Club.findAll({
       order: [["createdAt", "DESC"]]
@@ -23,6 +24,7 @@ module.exports = function(app) {
       });
     });
   });
+  */
 
   // Load example page and pass in an example by id
   app.get("/clubs/:club_id", (req, res) => {
