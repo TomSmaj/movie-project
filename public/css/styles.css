@@ -4,7 +4,6 @@ html{
   background-color: black;
 }
 
-
 .icon-block {
   padding: 0 15px;
 }
@@ -30,21 +29,33 @@ nav {
   color: #ebbb4a;
 }
 
-.discussion{
+.post-area{
   background-color: #d1d2d4;
+}
+
+.discussion-title{
+  color: white;
+  font-family: 'Limelight', cursive;
 }
 
 .poster{
 margin-top: 5%;}
 
 .film-strip{
+  height: 50px;
+  overflow: auto;
   background-color: black;
 }
 
-.row .col.s1{
-  height: 298px;
+.current_discussion{
+  height: auto;
   border: 2px solid white; 
 }
+
+.main-col{
+background-color: #d1d2d4;
+}
+
 
 #login-button{
   background-color: #ebbb4a;
