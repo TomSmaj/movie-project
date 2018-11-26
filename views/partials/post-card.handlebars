@@ -1,7 +1,11 @@
-<ul>
-    <div class="posts">
-{{discussion.user_id }}
-<h4>Are you there</h4>
-{{discussion.text }}
-    </div>
-</ul>
+<div class="posts">
+    <ul>
+        <div class="row single-post">
+            <div class="col l8 s8">
+                <h4 class="black-text">Post Author: {{post.title}} </h4>
+                <h5>User's text:</h5>
+                <p>{{post.text}}</p>
+            </div>
+        </div>
+    </ul>
+</div>

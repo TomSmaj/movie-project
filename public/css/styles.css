@@ -42,20 +42,31 @@ nav {
 margin-top: 5%;}
 
 .film-strip{
-  height: 50px;
+  height: 175px;
   overflow: auto;
-  background-color: black;
+  background-size: 100%;
+  background-image: url(https://i.pinimg.com/originals/43/c4/20/43c420aa5c6754dcd561d1713db16cea.jpg);
+  background-repeat: repeat-y;
 }
+
+/* .img{
+  background-size: 50%;
+} */
+
 
 .current_discussion{
   height: auto;
-  border: 2px solid white; 
+  border: 1px solid white; 
+  margin-bottom: 2%;
 }
 
 .main-col{
 background-color: #d1d2d4;
 }
 
+.row{
+  margin-bottom: 0;
+}
 
 #login-button{
   background-color: #ebbb4a;
