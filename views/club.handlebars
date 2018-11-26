@@ -1,17 +1,23 @@
-{{!-- 
-Title
-
-description
-
-Join Club
-
-Add Movie Button
-
-Now Showing
-
-Previous Films --}}
-
+<!--Title-->
+<div class="club-title"></div>
+<!--description-->
+<div class="club-description"></div>
+<!--Join Club-->
+<div class="join-club"></div>
+<!--Add Movie Button-->
+<div class="add-movie"></div>
+<!--Now Showing-->
+<div class="now-showing"></div>
+<!--Previous Films-->
+<div class="prev-films"></div>
 {{!-- to access partial --}}
-{{!-- {{<club-card }} --}}
+{{!-- {{<club-card }} --}} 
+HELLO HELP TEST
+    <ul>
+    {{#each discs}}
+    {{>discussion-card}}
+    {{/each }}
+    </ul>
 
-HI HOW ARE YOU
+<script src="/js/club.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

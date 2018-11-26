@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+const db = require("../models");
 
 // Routes
 // =============================================================
@@ -13,7 +14,23 @@ module.exports = function(app) {
 
   // index route loads index.handlebars
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    db.Club.findAll({
+      order: [["createdAt", "DESC"]]
+    }).then(dbClubs => {
+      res.render("index-2", {
+        clubs: dbClubs
+      });
+    });
+  });
+
+  app.get("/club/:clubid", function(req, res) {
+    db.Discussion.findAll({
+      where: { ClubClubId: req.params.clubid }
+    }).then(dbDisc => {
+      res.render("club", {
+        discs: dbDisc
+      });
+    });
   });
 
   // add-club route loads add-club.handlebars

@@ -1,7 +1,8 @@
 const db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+  // moved the load index to the HTML routes
+  /*
   app.get("/", (req, res) => {
     db.Club.findAll({
       order: [["createdAt", "DESC"]]
@@ -11,6 +12,19 @@ module.exports = function(app) {
       });
     });
   });
+  */
+
+  /*
+  app.get("/clubs", (req, res) => {
+    db.Club.findAll({
+      order: [["createdAt", "DESC"]]
+    }).then(dbClubs => {
+      res.render("index-2", {
+        clubs: dbClubs
+      });
+    });
+  });
+  */
 
   // Load example page and pass in an example by id
   app.get("/clubs/:club_id", (req, res) => {
@@ -25,6 +39,15 @@ module.exports = function(app) {
     });
   });
 
+  //send json object of all clubs from db
+  app.get("/api/clubs", (req, res) => {
+    db.Club.findAll({
+      order: [["createdAt", "DESC"]]
+    }).then(dbClubs => {
+      res.json(dbClubs);
+    });
+  });
+
   app.post("/api/clubs", (req, res) => {
     db.Club.create({
       name: req.body.name,
@@ -33,8 +56,11 @@ module.exports = function(app) {
       res.json(dbClub);
     });
   });
+
+  /*
   // Render 404 page for any unmatched routes
   app.get("*", (req, res) => {
     res.render("404");
   });
+  */
 };
