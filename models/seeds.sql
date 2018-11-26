@@ -41,10 +41,10 @@ VALUES('What do you guys think about Get Out',
         2
 );
 
-INSERT INTO clubusers(createdAt, updatedAt, ClubClubId, UserUserId)
+INSERT INTO clubuser(createdAt, updatedAt, ClubClubId, UserUserId)
 VALUES('2018-11-20', '2018-11-20', 1, 1);
 
-INSERT INTO clubusers(createdAt, updatedAt, ClubClubId, UserUserId)
+INSERT INTO clubuser(createdAt, updatedAt, ClubClubId, UserUserId)
 VALUES('2018-11-20', '2018-11-20', 2, 2);
 
 
