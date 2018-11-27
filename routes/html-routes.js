@@ -32,9 +32,12 @@ module.exports = function(app) {
       }]
     }).then(data => {
       res.json(data)
+      //change me back to res.render
+      //make sure this object is formatted as a hbrs object
     })
 
   })
+
   
     // db.Club.findAll({
     //     where: { clubId: req.params.clubid }
@@ -65,14 +68,14 @@ module.exports = function(app) {
   });
 
   // add-club route loads add-club.handlebars
-  app.get("/add-club", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/add-club.handlebars"));
-  });
+  // app.get("/add-club", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../views/add-club.handlebars"));
+  // });
 
   // add-movie route loads add-movie.handlebars
-  app.get("/add-movie", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
-  });
+//   app.get("/add-movie", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
+//   });
 
 };
 

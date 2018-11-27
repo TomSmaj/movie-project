@@ -67,7 +67,6 @@ nav {
 background-color: #d1d2d4;
 }
 
-<<<<<<< HEAD
 .disc-col{
   height: 175px;
   text-align: center;
@@ -76,12 +75,6 @@ background-color: #d1d2d4;
 
 .row{
   margin-bottom: 0;
-=======
-
-.single-post{
-  background-color: #d1d2d4;
-  width: 70%;
->>>>>>> ecc00e78f9b5748144c9ed3f2420c208245b0e27
 }
 
 #login-button{
@@ -89,7 +82,6 @@ background-color: #d1d2d4;
   color: #c9252f;
 }
 
-<<<<<<< HEAD
 .club-title{
   margin-top: 3%;
   font-family: 'Limelight', cursive ;
@@ -102,10 +94,6 @@ background-color: #d1d2d4;
   text-align: center;
   color: #f7ee8b;
   margin-bottom: 1%;
-=======
-.cur_disc_row{
-  margin-bottom: 0;
->>>>>>> ecc00e78f9b5748144c9ed3f2420c208245b0e27
 }
 
 footer{
