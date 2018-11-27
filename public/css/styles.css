@@ -48,17 +48,30 @@ nav {
   margin-bottom: 2%;
 }
 
-.poster{
-margin-top: 5%;
-}
 
 .film-strip{
-  background-image: url("/public/images/film.jpg");
+  height: 175px;
+  overflow: auto;
+  background-size: 100%;
+  background-image: url(https://i.pinimg.com/originals/43/c4/20/43c420aa5c6754dcd561d1713db16cea.jpg);
+  background-repeat: repeat-y;
+}
+
+/* .img{
+  background-size: 50%;
+} */
+
+
+.current_discussion{
+  height: auto;
+  border: 1px solid white; 
+  margin-bottom: 2%;
 }
 
 .main-col{
 background-color: #d1d2d4;
 }
+
 
 .single-post{
   background-color: #d1d2d4;

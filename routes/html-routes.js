@@ -33,6 +33,16 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/discussion/:discussionId", function(req,res) {
+    db.Post.findAll({
+      where: { DiscussionDiscussionId: req.params.discussionId }
+    }).then(dbPosts => {
+      res.render("discussion", {
+        posts: dbPosts
+      });
+    });
+  });
+
   // add-club route loads add-club.handlebars
   app.get("/add-club", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/add-club.handlebars"));
@@ -42,4 +52,6 @@ module.exports = function(app) {
   app.get("/add-movie", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
   });
+
 };
+
