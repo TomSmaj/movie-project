@@ -10,3 +10,15 @@ $(".discussion").on("click", function(){
     window.location.href = "/discussion/" + discussionId;
   });
 });
+
+// submit post
+$("#submit_post").on("click", function(){
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: data,
+    dataType: dataType
+  }).then(
+    // get req to get all discussions and reload window
+  ).fail()
+});
