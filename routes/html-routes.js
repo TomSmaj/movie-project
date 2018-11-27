@@ -85,4 +85,15 @@ module.exports = function(app) {
   //   app.get("/add-movie", function(req, res) {
   //     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
   //   });
+
+
+  // Nav bar links - not needing to make db call until submit button clicked
+  app.get("/add-club", function(req, res) {
+      res.render("add-club");
+  });
+
+  app.get("/add-movie", function(req, res) {
+    res.render("add-movie");
+  });
+
 };
