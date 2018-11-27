@@ -12,9 +12,9 @@ module.exports = function(sequelize, Sequelize) {
     admin: Sequelize.STRING // username of user who made club
   }); // there is also a 'createdAt' and 'updatedAt' field that is being autocreated by sequelize
 
-  Club.associate = function(models) {
-    Club.belongsToMany(models.User, { through: "ClubUser" });
-  };
+  // Club.associate = function(models) {
+  //   Club.belongsToMany(models.User, { through: "ClubUser" });
+  // };
 
   return Club;
 };
