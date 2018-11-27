@@ -3,9 +3,15 @@ $(document).ready(function() {
 });
 
 $(".discussion").on("click", function(){
+  try{
   var discussionId = $(this).attr("discussionId");
   console.log("you just clicked "+ discussionId);
-  $.get("/discussion/"+discussionId).then(function(){
-    window.location.href = "/discussion/"+discussionId;
-  })
-})
+  $.get("/discussion/" + discussionId).then(function(){
+    console.log("window location href: "+ window.location.href)
+    window.location.href = "/discussion/" + discussionId;
+  });
+}
+  catch(error) {
+    console.log("error" + error);
+  }
+});

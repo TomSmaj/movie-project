@@ -15,18 +15,19 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/group/:group_id", (req, res) => {
-    // eslint-disable-next-line camelcase
-    db.Group.findOne({
-      // eslint-disable-next-line camelcase
-      where: { group_id: req.params.group_id },
-      include: [db.Discussion]
-    }).then(dbGroup => {
-      res.render("group", {
-        group: dbGroup
-      });
-    });
-  });
+  // app.get("/group/:group_id", (req, res) => {
+  //   // eslint-disable-next-line camelcase
+  //   db.Group.findOne({
+  //     // eslint-disable-next-line camelcase
+  //     where: { group_id: req.params.group_id },
+  //     include: [db.Discussion]
+  //   }).then(dbGroup => {
+  //     res.render("group", {
+  //       group: dbGroup
+  //     });
+  //   });
+  // });
+
 
   // Render 404 page for any unmatched routes
   /*

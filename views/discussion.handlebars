@@ -1,6 +1,4 @@
-      {{#each }}
-      
-      <a href="club/{{this.id}}">
+     
       <div class="container discussion">
         <div class="row">
           <div class="col l1 s1 offset-1 film-strip"></div>
@@ -30,5 +28,5 @@
 
 {{#each }}
 {{!-- Pretty sure this is incorrect - do we need the post partial since it's only holding a little bit of info? --}}
-    {{> partials/post-card }}
+    {{> post-card }}
 {{/each }}

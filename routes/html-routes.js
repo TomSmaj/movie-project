@@ -24,21 +24,42 @@ module.exports = function(app) {
   });
 
   app.get("/club/:clubid", function(req, res) {
-    db.Discussion.findAll({
-      where: { ClubClubId: req.params.clubid }
-    }).then(dbDisc => {
-      res.render("club", {
-        discs: dbDisc
-      });
-    });
-  });
+    let clubData, discussionData
+    db.Club.findOne({
+      where: { clubId: req.params.clubid },
+      include: [{
+        model: db.Discussion
+      }]
+    }).then(data => {
+      res.json(data)
+    })
+
+  })
+  
+    // db.Club.findAll({
+    //     where: { clubId: req.params.clubid }
+    //   }).then(dbDisc => {
+    //      res.json(dbDisc)
+        // res.render("club", {
+        //   discs: dbDisc
+        // });
+      // })
+    // db.Discussion.findAll({
+    //   where: { ClubClubId: req.params.clubid }
+    // }).then(dbDisc => {
+    //   // res.json(dbDisc)
+    //   res.render("club", {
+    //     discs: dbDisc
+    //   });
+    // }).catch(err => console.log(err))
+  // });
 
   app.get("/discussion/:discussionId", function(req,res) {
     db.Post.findAll({
       where: { DiscussionDiscussionId: req.params.discussionId }
-    }).then(dbPosts => {
+    }).then(dbPost => {
       res.render("discussion", {
-        posts: dbPosts
+        posts: dbPost
       });
     });
   });

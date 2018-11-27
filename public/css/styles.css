@@ -49,11 +49,6 @@ margin-top: 5%;}
   background-repeat: repeat-y;
 }
 
-/* .img{
-  background-size: 50%;
-} */
-
-
 .current_discussion{
   height: auto;
   border: 1px solid white; 
@@ -64,6 +59,12 @@ margin-top: 5%;}
 background-color: #d1d2d4;
 }
 
+.disc-col{
+  height: 175px;
+  text-align: center;
+  background-color: #d1d2d4;
+}
+
 .row{
   margin-bottom: 0;
 }
@@ -71,6 +72,20 @@ background-color: #d1d2d4;
 #login-button{
   background-color: #ebbb4a;
   color: #c9252f;
+}
+
+.club-title{
+  margin-top: 3%;
+  font-family: 'Limelight', cursive ;
+  font-size: 32px;
+  text-align: center;
+  color:#ebbb4a;
+}
+
+.club-description{
+  text-align: center;
+  color: #f7ee8b;
+  margin-bottom: 1%;
 }
 
 footer{
