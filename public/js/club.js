@@ -9,3 +9,4 @@ $(".discussion").on("click", function(){
     window.location.href = "/discussion/"+discussionId;
   })
 })
+

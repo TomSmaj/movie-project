@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight|Righteous');
 
-html{
-  background-color: black;
-}
-
 .icon-block {
   padding: 0 15px;
 }
@@ -17,11 +13,15 @@ body {
 }
 
 nav {
-  box-shadow: 0 5px rgb(255, 255, 255) ;
+  box-shadow: 0 4px rgb(255, 255, 255);
 }
 
 .header {
   color: #f7ee8b;
+}
+
+.index-club-cards{
+  margin-bottom: 2%;
 }
 
 .title {
@@ -33,13 +33,21 @@ nav {
   background-color: #d1d2d4;
 }
 
+.discussion{
+  text-align: center;
+}
+
 .discussion-title{
   color: white;
   font-family: 'Limelight', cursive;
 }
 
-.poster{
-margin-top: 5%;}
+.current_discussion{
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.8); 
+  margin-bottom: 2%;
+}
+
 
 .film-strip{
   height: 175px;
@@ -64,13 +72,19 @@ margin-top: 5%;}
 background-color: #d1d2d4;
 }
 
-.row{
-  margin-bottom: 0;
+
+.single-post{
+  background-color: #d1d2d4;
+  width: 70%;
 }
 
 #login-button{
   background-color: #ebbb4a;
   color: #c9252f;
+}
+
+.cur_disc_row{
+  margin-bottom: 0;
 }
 
 footer{
