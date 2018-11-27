@@ -24,48 +24,54 @@ module.exports = function(app) {
   });
 
   app.get("/club/:clubid", function(req, res) {
-    let clubData, discussionData
+    let clubData, discussionData;
     db.Club.findOne({
       where: { clubId: req.params.clubid },
-      include: [{
-        model: db.Discussion
-      }]
+      include: [
+        {
+          model: db.Discussion
+        }
+      ]
     }).then(data => {
-      res.render("club",{
+      res.render("club", {
         discs: data
       });
       // res.json(data)
       //change me back to res.render
       //make sure this object is formatted as a hbrs object
     });
+  });
 
-  })
-
-  
-    // db.Club.findAll({
-    //     where: { clubId: req.params.clubid }
-    //   }).then(dbDisc => {
-    //      res.json(dbDisc)
-        // res.render("club", {
-        //   discs: dbDisc
-        // });
-      // })
-    // db.Discussion.findAll({
-    //   where: { ClubClubId: req.params.clubid }
-    // }).then(dbDisc => {
-    //   // res.json(dbDisc)
-    //   res.render("club", {
-    //     discs: dbDisc
-    //   });
-    // }).catch(err => console.log(err))
+  // db.Club.findAll({
+  //     where: { clubId: req.params.clubid }
+  //   }).then(dbDisc => {
+  //      res.json(dbDisc)
+  // res.render("club", {
+  //   discs: dbDisc
+  // });
+  // })
+  // db.Discussion.findAll({
+  //   where: { ClubClubId: req.params.clubid }
+  // }).then(dbDisc => {
+  //   // res.json(dbDisc)
+  //   res.render("club", {
+  //     discs: dbDisc
+  //   });
+  // }).catch(err => console.log(err))
   // });
 
-  app.get("/discussion/:discussionId", function(req,res) {
-    db.Post.findAll({
-      where: { DiscussionDiscussionId: req.params.discussionId }
+  app.get("/discussion/:discussionId", function(req, res) {
+    db.Discussion.findOne({
+      where: { discussionId: req.params.discussionId },
+      include: [
+        {
+          model: db.Post
+        }
+      ]
     }).then(dbPost => {
+      // res.json(dbPost);
       res.render("discussion", {
-        posts: dbPost
+      userComment: dbPost
       });
     });
   });
@@ -76,9 +82,7 @@ module.exports = function(app) {
   // });
 
   // add-movie route loads add-movie.handlebars
-//   app.get("/add-movie", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
-//   });
-
+  //   app.get("/add-movie", function(req, res) {
+  //     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
+  //   });
 };
-

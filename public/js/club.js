@@ -9,5 +9,4 @@ $(".discussion").on("click", function(){
     console.log("window location href: "+ window.location.href)
     window.location.href = "/discussion/" + discussionId;
   });
-    console.log("error" + error);
 });

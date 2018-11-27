@@ -1,56 +1,23 @@
-<<<<<<< HEAD
      
-=======
-
-      <a href="club/{{this.id}}">
->>>>>>> ecc00e78f9b5748144c9ed3f2420c208245b0e27
       <div class="container discussion">
         <div class="row">
           <div class="col l1 s1 offset-1 film-strip"></div>
           <div class="col l7 s7">
-            <h4 class="black-text">Group Name </h4>
-            <h5>Now Showing:</h5>
-            <p>Current Movie Being Discussed</p>
-            <h5>Discussion starts:</h5>
-            <p>MM/DD</p>
+            <h4 class="black-text"></h4>
+            <h5>Now Showing:{{userComment.movie}}</h5>
+            <h5>Discussion Starts:</h5>
+            <p>{{userComment.startDate}}</p>
+            <h5>Discussion Ends:</h5>
+            <p>{{userComment.endDate}}</p>
+
+            {{#each userComment.Posts}}
+              {{>post-card}}
+            {{/each}}
           </div>
           <div class="col l4 s4 valign-wrapper" id="poster">
             <img class="responsive-img poster" src="/public/images/film.jpg">
           </div>
         </div>
       </div>
-      </a>
 
-
-
-
-{{!-- title, summary --}}
-
-{{this.movie}}
-{{this.movie_plot}}
-
-{{!-- 
-<div class="discussion container" discussionId = "{{discussionId}}">
-        <div class="row">
-            <div class="col l12 s10">
-                <h4 class="discussion-title">{{title}} </h4>
-                <h5 class="white-text">Description:</h5>
-                <p class="white-text">{{text}}</p>
-            </div>
-            <div class="col l4 s4 valign-wrapper" id="poster">
-                {{!-- ?? How to link image from url href ?? --}}
-                {{!-- <img class="responsive-img poster" src="{{}}"> --}}
-            </div>
-        </div>
-    </div>
-
-<ul>
-    {{>post-card }}
-</ul> --}}
-
-{{!-- {{discussion posts}} --}}
-
-{{#each }}
-{{!-- Pretty sure this is incorrect - do we need the post partial since it's only holding a little bit of info? --}}
-    {{> post-card }}
-{{/each }}
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

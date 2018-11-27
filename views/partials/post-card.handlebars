@@ -1,11 +1,15 @@
-<div class="posts">
-    <ul>
-        <div class="row single-post">
-            <div class="col l8 s8">
-                <h4 class="black-text">Post Author: {{post.title}} </h4>
-                <h5>User's text:</h5>
-                <p>{{post.text}}</p>
+<div class="posts" poster="{{poster}}">
+
+    <div class="post container" postId="{{postId}}">
+
+        <ul>
+            <div class="row single-post">
+                <div class="col l8 s8">
+                    <h4 class="black-text">Post Title: {{title}} </h4>
+                    <h5>User's text:</h5>
+                    <p>{{text}}</p>
+                </div>
             </div>
-        </div>
-    </ul>
+        </ul>
+    </div>
 </div>
