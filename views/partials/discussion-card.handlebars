@@ -1,11 +1,17 @@
 <!--including discussionId in class field so we'll be able to identify which club is being click -->
-<div class="discussion container current_discussion" discussionId = "{{discussionId}}">
+<div class="discussion container" discussionId = "{{discussionId}}">
         <div class="row">
+
             <div class="col l1 s1 offset-1 film-strip"></div>
             <div class="col l11 s11 disc-col">
                 <h4 class="black-text">{{title}} </h4>
                 <h5>Description:</h5>
+<<<<<<< HEAD
                 <p>{{text}}</p>
+=======
+                <p>discussion-card-partial{{text}}</p>
+
+>>>>>>> ecc00e78f9b5748144c9ed3f2420c208245b0e27
             </div>
             {{!-- <div class="col l2 s2 valign-wrapper" id="poster"> --}}
                 {{!-- ?? How to link image from url href ?? --}}
@@ -13,3 +19,7 @@
             </div>
         </div>
     </div>
+
+<ul>
+    {{>discussion-card }}
+</ul>
