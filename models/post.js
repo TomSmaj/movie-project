@@ -14,22 +14,5 @@ module.exports = function(sequelize, Sequelize) {
     poster: Sequelize.STRING // username of the user who made the post
   }); //there is also a 'createdAt' field that is being autocreated by sequelize
 
-  Post.associate = function(models) {
-    // We're saying that a Post should belong to a Discussion
-    // A Post can't be created without a Discussion due to the foreign key constraint
-    // A Post also belong's to a User
-    Post.belongsTo(models.Discussion, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-
-    Post.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
-
   return Post;
 };

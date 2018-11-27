@@ -4,7 +4,6 @@
 
 // Dependencies
 // =============================================================
-var path = require("path");
 const db = require("../models");
 
 // Routes
@@ -23,23 +22,38 @@ module.exports = function(app) {
     });
   });
 
+  // app.get("/club/:clubid", function(req, res) {
+  //   db.Discussion.findAll({
+  //     where: { ClubClubId: req.params.clubid }
+  //   }).then(dbDisc => {
+  //     res.render("club", {
+  //       discs: dbDisc
+  //     });
+  //   });
+  // });
+
   app.get("/club/:clubid", function(req, res) {
-    db.Discussion.findAll({
-      where: { ClubClubId: req.params.clubid }
-    }).then(dbDisc => {
-      res.render("club", {
-        discs: dbDisc
-      });
+    db.Club.findOne({
+      where: { clubId: req.params.clubid },
+      include: [
+        {
+          model: db.Discussion
+        }
+      ]
+    }).then(data => {
+      res.json(data);
+      //change me back to res.render
+      //make sure this object is formatted as a hbrs object
     });
   });
 
-  // add-club route loads add-club.handlebars
-  app.get("/add-club", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/add-club.handlebars"));
-  });
-
-  // add-movie route loads add-movie.handlebars
-  app.get("/add-movie", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
+  app.get("/discussion/:discussionid", function(req, res) {
+    db.Post.findAll({
+      where: { DiscussionDiscussionId: req.params.discussionid }
+    }).then(dbPosts => {
+      res.render("discussion", {
+        posts: dbPosts
+      });
+    });
   });
 };

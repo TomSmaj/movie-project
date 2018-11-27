@@ -9,7 +9,7 @@ VALUES('Women in Cinema', 'This is a movie club focusing on the discussion of wo
 INSERT INTO clubs(name, description, createdAt, updatedAt, admin) 
 VALUES('Racial Justice', 'This is a movie club focusing on the discussion of movies exploring the topics of racial justice.', '2018-11-20', '2018-11-20', 'testUser2');
 
-INSERT INTO discussions(text, title, startDate, endDate, active, movie, moviePoster, moviePlot, movieYear, createdAt, updatedAt, ClubClubId, UserUserId)
+INSERT INTO discussions(text, title, startDate, endDate, active, movie, moviePoster, moviePlot, movieYear, createdAt, updatedAt, clubId, userId)
 VALUES('Hey guys, I want to talk about Suspiria. What did you think about it?',
 		'What did you think about Suspiria?',
 		'2018-11-20',
@@ -25,7 +25,7 @@ VALUES('Hey guys, I want to talk about Suspiria. What did you think about it?',
         1
 );
 
-INSERT INTO discussions(text, title, startDate, endDate, active, movie, moviePoster, moviePlot, movieYear, createdAt, updatedAt, ClubClubId, UserUserId)
+INSERT INTO discussions(text, title, startDate, endDate, active, movie, moviePoster, moviePlot, movieYear, createdAt, updatedAt, clubId, userId)
 VALUES('What do you guys think about Get Out',
 		'Get Out?',
 		'2018-11-20',
@@ -46,6 +46,27 @@ VALUES('2018-11-20', '2018-11-20', 1, 1);
 
 INSERT INTO clubuser(createdAt, updatedAt, ClubClubId, UserUserId)
 VALUES('2018-11-20', '2018-11-20', 2, 2);
+
+INSERT INTO posts(text, title, respondingTo, poster, createdAt, updatedAt, discussionId, userId)
+VALUES("what up, this movie is rad!",
+		"rad",
+        0,
+        "testUser1",
+        "2018-11-25",
+        "2018-11-25",
+        "1",
+        "1");
+        
+INSERT INTO posts(text, title, respondingTo, poster, createdAt, updatedAt, discussionId, userId)
+VALUES("what up, this movie is sooooo not rad!",
+		"not rad",
+        0,
+        "testUser2",
+        "2018-11-25",
+        "2018-11-25",
+        "2",
+        "2");
+		
 
 
 
