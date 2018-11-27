@@ -1,7 +1,7 @@
 <!--Title-->
-<div class="club-title">Club Title Here</div>
+<div class="club-title">{{discs.name}}</div>
 <!--description-->
-<div class="club-description">A short description of what main topics the club will focus on.</div>
+<div class="club-description">{{discs.description}}</div>
 <!--Join Club-->
 <div class="join-club"></div>
 <!--Add Movie Button-->
@@ -13,8 +13,7 @@
 {{!-- to access partial --}}
 {{!-- {{<club-card }} --}} 
     <ul>
-        test
-    {{#each discs}}
+    {{#each discs.Discussions }}
     {{>discussion-card}}
     {{/each }}
     </ul>

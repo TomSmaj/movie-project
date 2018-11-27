@@ -31,10 +31,13 @@ module.exports = function(app) {
         model: db.Discussion
       }]
     }).then(data => {
-      res.json(data)
+      res.render("club",{
+        discs: data
+      });
+      // res.json(data)
       //change me back to res.render
       //make sure this object is formatted as a hbrs object
-    })
+    });
 
   })
 
