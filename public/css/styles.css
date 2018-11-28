@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight|Righteous');
 
-html{
-  background-color: black;
-}
-
-
 .icon-block {
   padding: 0 15px;
 }
@@ -18,11 +13,15 @@ body {
 }
 
 nav {
-  box-shadow: 0 5px rgb(255, 255, 255) ;
+  box-shadow: 0 4px rgb(255, 255, 255);
 }
 
 .header {
   color: #f7ee8b;
+}
+
+.index-club-cards{
+  margin-bottom: 2%;
 }
 
 .title {
@@ -30,20 +29,65 @@ nav {
   color: #ebbb4a;
 }
 
-.discussion{
+.post-area{
   background-color: #d1d2d4;
 }
 
-.poster{
-margin-top: 5%;}
-
-.film-strip{
-  background-color: black;
+.discussion{
+  text-align: center;
 }
 
-.row .col.s1{
-  height: 298px;
-  border: 2px solid white; 
+.discussion_con{
+margin-top: 3%;
+align-content: center;
+}
+
+.ind_discussion{
+  text-align: center;
+  background-color: #d1d2d4; 
+}
+
+.post{
+  background-color:  #ebbb4a
+}
+
+.discussion-title{
+  color: white;
+  font-family: 'Limelight', cursive;
+}
+
+.current_discussion{
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.8); 
+  margin-bottom: 2%;
+}
+
+.film-strip{
+  height: 175px;
+  overflow: auto;
+  background-size: 100%;
+  background-image: url(https://i.pinimg.com/originals/43/c4/20/43c420aa5c6754dcd561d1713db16cea.jpg);
+  background-repeat: repeat-y;
+}
+
+.current_discussion{
+  height: auto;
+  border: 1px solid white; 
+  margin-bottom: 2%;
+}
+
+.main-col{
+background-color: #d1d2d4;
+}
+
+.disc-col{
+  height: 175px;
+  text-align: center;
+  background-color: #d1d2d4;
+}
+
+.row{
+  margin-bottom: 0;
 }
 
 #login-button{
@@ -51,6 +95,49 @@ margin-top: 5%;}
   color: #c9252f;
 }
 
+.club-title{
+  margin-top: 3%;
+  font-family: 'Limelight', cursive ;
+  font-size: 32px;
+  text-align: center;
+  color:#ebbb4a;
+}
+
+.club-description{
+  text-align: center;
+  color: #f7ee8b;
+  margin-bottom: 1%;
+}
+
 footer{
   bottom: 0;
+}
+
+.single-post:hover{
+  transform: translateY(-0.2em);
+  box-shadow: 
+    0.1em 0.1em 0.1em 0.1em #f7ee8b, 
+    inset -2em -1em 5em 0.1em #f7ee8b;
+}
+
+.cur_disc_row:hover {
+  box-shadow: 
+  0em 0em 0em 0em #ebbb4a, 
+  0em 0em 5em 0.1em #ebbb4a;
+}
+
+.discussions_cards:hover{
+  box-shadow: 
+  0em 0em 0em 0em #ebbb4a, 
+  0em 0em 5em 0.1em #ebbb4a;
+  -webkit-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  -ms-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+}
+
+.form_post{
+  margin-top: 2%;
+  margin-bottom:2%;
 }

@@ -19,5 +19,25 @@ module.exports = function(sequelize, Sequelize) {
     movieYear: Sequelize.INTEGER // year the movie was released, taken from OMDB
   }); // there is also a 'createdAt' and 'updatedAt' field that is being autocreated by sequelize
 
+<<<<<<< HEAD
+=======
+  // Discussion.associate = function(models) {
+    // We're saying that a Discussion should belong to an Club
+    // A Discussion can't be created without a Club due to the foreign key constraint
+    // A Discussion also belong's to a User
+    // Discussion.belongsTo(models.Club, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
+
+    // Discussion.belongsTo(models.User, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
+  // };
+
+>>>>>>> 0720e33ed4c4bcfd0155842599b651d6fa447f9e
   return Discussion;
 };
