@@ -1,34 +1,47 @@
-      {{#each }}
-      
-      <a href="club/{{this.id}}">
-      <div class="container discussion">
-        <div class="row">
-          <div class="col l1 s1 offset-1 film-strip"></div>
-          <div class="col l7 s7">
-            <h4 class="black-text">Group Name </h4>
-            <h5>Now Showing:</h5>
-            <p>Current Movie Being Discussed</p>
-            <h5>Discussion starts:</h5>
-            <p>MM/DD</p>
-          </div>
-          <div class="col l4 s4 valign-wrapper" id="poster">
-            <img class="responsive-img poster" src="./css/images/suspiria.jpg">
-          </div>
+<div class="container discussion_con">
+  <div class="row">
+    <div class="col l2 s2 offset-2"></div>
+    <div class="col l8 s8 ind_discussion">
+      <h3>Now Showing {{userComment.movie}}</h3>
+      <h5>Discussion Starts:</h5>
+      <p>{{userComment.startDate}}</p>
+      <h5>Discussion Ends:</h5>
+      <p>{{userComment.endDate}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="ind_posts">
+  {{#each userComment.Posts}}
+  {{>post-card}}
+  {{/each}}
+</div>
+<div class="col l4 s4 valign-wrapper" id="poster">
+  <img class="responsive-img poster">
+</div>
+
+{{!-- Form to add a comment post req to database --}}
+<div class="container form_post">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="My Post Name" id="post_title" type="text" class="validate">
+          <label for="first_name">Post Tite</label>
         </div>
       </div>
-      </a>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea placeholder="My thoughts on this movie were..." id="post_text" class="materialize-textarea"></textarea>
+          <label for="textarea1">Thoughts?</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" id="submit_post" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+</div>
 
 
-
-
-{{!-- title, summary --}}
-
-{{this.movie}}
-{{this.movie_plot}}
-
-{{!-- {{discussion posts}} --}}
-
-{{#each }}
-{{!-- Pretty sure this is incorrect - do we need the post partial since it's only holding a little bit of info? --}}
-    {{> partials/post-card }}
-{{/each }}
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

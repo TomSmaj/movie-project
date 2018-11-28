@@ -1,7 +1,7 @@
 <!--Title-->
-<div class="club-title"></div>
+<div class="club-title">{{discs.name}}</div>
 <!--description-->
-<div class="club-description"></div>
+<div class="club-description">{{discs.description}}</div>
 <!--Join Club-->
 <div class="join-club"></div>
 <!--Add Movie Button-->
@@ -12,12 +12,11 @@
 <div class="prev-films"></div>
 {{!-- to access partial --}}
 {{!-- {{<club-card }} --}} 
-HELLO HELP TEST
     <ul>
-    {{#each discs}}
+    {{#each discs.Discussions }}
     {{>discussion-card}}
     {{/each }}
     </ul>
 
-<script src="/js/club.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/js/club.js"></script>

@@ -36,6 +36,12 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+//associations
+db.Discussion.belongsTo(db.Club, {foreignKey: 'clubId'})
+db.Club.hasMany(db.Discussion, {foreignKey: 'clubId'})
+db.Post.belongsTo(db.Discussion, {foreignKey: 'discussionId'})
+db.Discussion.hasMany(db.Post, {foreignKey: 'discussionId'})
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
