@@ -1,3 +1,5 @@
+// Dependencies
+// =============================================================
 const db = require("../models");
 
 // Routes
@@ -15,6 +17,16 @@ module.exports = function(app) {
       });
     });
   });
+
+  // app.get("/club/:clubid", function(req, res) {
+  //   db.Discussion.findAll({
+  //     where: { ClubClubId: req.params.clubid }
+  //   }).then(dbDisc => {
+  //     res.render("club", {
+  //       discs: dbDisc
+  //     });
+  //   });
+  // });
 
   app.get("/club/:clubid", function(req, res) {
     db.Club.findOne({
@@ -63,7 +75,7 @@ module.exports = function(app) {
     }).then(dbPost => {
       // res.json(dbPost);
       res.render("discussion", {
-      userComment: dbPost
+        userComment: dbPost
       });
     });
   });
@@ -77,4 +89,17 @@ module.exports = function(app) {
   //   app.get("/add-movie", function(req, res) {
   //     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
   //   });
+
+  // Nav bar links - not needing to make db call until submit button clicked
+  app.get("/add-club", function(req, res) {
+    res.render("add-club");
+  });
+
+  app.get("/add-movie", function(req, res) {
+    res.render("add-movie");
+  });
+
+  app.get("/create-user", function(req, res) {
+    res.render("create-user");
+  });
 };

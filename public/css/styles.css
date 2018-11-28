@@ -37,6 +37,20 @@ nav {
   text-align: center;
 }
 
+.discussion_con{
+margin-top: 3%;
+align-content: center;
+}
+
+.ind_discussion{
+  text-align: center;
+  background-color: #d1d2d4; 
+}
+
+.post{
+  background-color:  #ebbb4a
+}
+
 .discussion-title{
   color: white;
   font-family: 'Limelight', cursive;
@@ -47,7 +61,6 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.8); 
   margin-bottom: 2%;
 }
-
 
 .film-strip{
   height: 175px;
@@ -98,4 +111,33 @@ background-color: #d1d2d4;
 
 footer{
   bottom: 0;
+}
+
+.single-post:hover{
+  transform: translateY(-0.2em);
+  box-shadow: 
+    0.1em 0.1em 0.1em 0.1em #f7ee8b, 
+    inset -2em -1em 5em 0.1em #f7ee8b;
+}
+
+.cur_disc_row:hover {
+  box-shadow: 
+  0em 0em 0em 0em #ebbb4a, 
+  0em 0em 5em 0.1em #ebbb4a;
+}
+
+.discussions_cards:hover{
+  box-shadow: 
+  0em 0em 0em 0em #ebbb4a, 
+  0em 0em 5em 0.1em #ebbb4a;
+  -webkit-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  -ms-transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
+}
+
+.form_post{
+  margin-top: 2%;
+  margin-bottom:2%;
 }
