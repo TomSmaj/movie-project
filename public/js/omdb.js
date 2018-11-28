@@ -1,24 +1,31 @@
-var request = require("request");
+function displayMovieInfo() {
+  const movie = $("#new_movie").val();
+  console.log(movie);
+  const date = $("#movie_year").val();
+  console.log(date);
+  var reqString = "http://www.omdbapi.com/?apikey=trilogy&t=" + movie;
+  if (date !== "") {
+    reqString += "&y=" + date;
+  }
 
-// TODO: Get these movies and date from the front-end
-const movie = $("#newMovie");
-const date = $("#startDate");
-var reqString = "http://www.omdbapi.com/?apikey=trilogy&t=" + movie;
-if (date !== null) {
-  reqString += "?y=" + date;
-}
+  console.log(reqString);
 
-request(reqString, function(error, response, data) {
-  try {
-    var response = JSON.parse(data);
+  $.ajax({
+    url: reqString,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
     var title = response.Title;
+    console.log(title);
     var year = response.Year;
     var poster = response.Poster;
-    // TODO: Send this back to the front end
-    console.log(title);
-    console.log(year);
     console.log(poster);
-  } catch (error) {
-    console.log(error);
-  }
-});
+    var image = $("<img>").attr("src", poster);
+    // TODO: Send this back to the front end
+    $("#confirm-movie-title").text(title);
+    $("#confirm-movie-year").text(year);
+    $(".poster").html(image);
+  });
+}
+
+$(document).on("click", "#add_movie_btn", displayMovieInfo);

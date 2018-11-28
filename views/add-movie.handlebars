@@ -14,8 +14,8 @@
           <label for="club_name">Movie Name</label>
         </div>
         <div class="input-field col s6">
-          <input placeholder="Title of discussion" id="new_disc" type="text" class="validate">
-          <label for="club_name">Discussion Topics</label>
+          <input placeholder="Year of movie (optional)" id="movie_year" type="text" class="validate">
+          <label for="club_name">Year</label>
         </div>
       </div>
       <div class="row">
@@ -32,9 +32,21 @@
                <input type="text" class="datepicker">
           </div>
       </div>
-      <button class="btn waves-effect waves-light" type="submit" id="add_movie_btn" name="action">Add Movie!
+      <button data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" id="add_movie_btn">Add Movie!
         <i class="fas fa-video"></i>
       </button>
     </form>
   </div>
+</div>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Confirm Movie</h4>
+        <h6 id="confirm-movie-title"></h6>
+        <h6 id="confirm-movie-year"></h6>
+        <div class="poster"></div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">That's my movie!</a>
+    </div>
 </div>
