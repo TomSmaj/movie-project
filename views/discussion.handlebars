@@ -2,11 +2,16 @@
   <div class="row">
     <div class="col l2 s2 offset-2"></div>
     <div class="col l8 s8 ind_discussion">
-      <h3>Now Showing {{userComment.movie}}</h3>
-      <h5>Discussion Starts:</h5>
-      <p>{{userComment.startDate}}</p>
-      <h5>Discussion Ends:</h5>
-      <p>{{userComment.endDate}}</p>
+      <div class="display_box">
+        <h3 class="showing-text">Now Showing</h3>
+      </div>
+      <div class="showing-info">
+        <h3>{{userComment.movie}}</h3>
+        <h5>Discussion Starts:</h5>
+        <p>{{userComment.startDate}}</p>
+        <h5>Discussion Ends:</h5>
+        <p>{{userComment.endDate}}</p>
+      </div>
     </div>
   </div>
 </div>
