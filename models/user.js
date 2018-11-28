@@ -10,14 +10,9 @@ module.exports = function(sequelize, Sequelize) {
     password: Sequelize.STRING
   });
 
-  User.associate = function(models) {
-    User.belongsToMany(models.Club, {
-      through: "ClubUser",
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // User.associate = function(models) {
+  //   User.belongsToMany(models.Club, { through: "ClubUser" });
+  // };
 
   return User;
 };

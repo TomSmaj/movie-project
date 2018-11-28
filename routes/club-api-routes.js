@@ -1,33 +1,8 @@
 const db = require("../models");
 
 module.exports = function(app) {
-  // moved the load index to the HTML routes
-  /*
-  app.get("/", (req, res) => {
-    db.Club.findAll({
-      order: [["createdAt", "DESC"]]
-    }).then(dbClubs => {
-      res.render("index", {
-        clubs: dbClubs
-      });
-    });
-  });
-  */
-
-  /*
-  app.get("/clubs", (req, res) => {
-    db.Club.findAll({
-      order: [["createdAt", "DESC"]]
-    }).then(dbClubs => {
-      res.render("index-2", {
-        clubs: dbClubs
-      });
-    });
-  });
-  */
-
   // Load example page and pass in an example by id
-  app.get("/clubs/:club_id", (req, res) => {
+  app.get("/api/clubs/:club_id", (req, res) => {
     db.Club.findOne({
       // eslint-disable-next-line camelcase
       where: { club_id: req.params.club_id },
