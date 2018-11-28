@@ -20,16 +20,16 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="new_club_description"> Please  provide a briefdescription of what this club will be focusing on </label>
+          <textarea id="movie-description" class="materialize-textarea"></textarea>
+          <label for="new_club_description"> Please provide a brief description of what this club will be focusing on </label>
         </div>
       </div>
       <div class="row">
           <div class="start-date col l6 s12">Discussion Starts: 
-               <input type="text" class="datepicker">
+               <input type="text" class="datepicker" id="start-date">
           </div>
           <div class="end-date col l6 s12">Discussion Ends: 
-               <input type="text" class="datepicker">
+               <input type="text" class="datepicker" id="end-date">
           </div>
       </div>
       <button data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" id="add_movie_btn">Add Movie!
@@ -42,9 +42,13 @@
 <div id="modal1" class="modal">
     <div class="modal-content">
         <h4>Confirm Movie</h4>
-        <h6 id="confirm-movie-title"></h6>
-        <h6 id="confirm-movie-year"></h6>
+        <p id="confirm-movie-title"></p>
+        <p id="confirm-movie-year"></p>
+        <p id="confirm-movie-plot"></p>
         <div class="poster"></div>
+        <p id="confirm-discussion"></p>
+        <p id="confirm-start-date"></p>
+        <p id="confirm-end-date"></p>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">That's my movie!</a>

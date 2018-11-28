@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "MyNewPass",
-    "database": "animals_db",
+    "database": "movies_db",
     "host": "localhost",
     "dialect": "mysql"
   },
