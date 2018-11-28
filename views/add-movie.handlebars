@@ -1,7 +1,7 @@
 
 {{!-- Add a new movie to discuss. This happens when you are already on a club's page. Potentially only for Moderator/Logged In User --}}
 
-<h2>Add a movie for your club to discuss</h2>
+<h1 class="heading">New Movie Discussion</h1>
 
 
 {{!-- Form to add a new club --}}
@@ -10,31 +10,40 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Movie to discuss" id="new_movie" type="text" class="validate">
+          <input id="new_movie" type="text" class="validate">
           <label for="club_name">Movie Name</label>
         </div>
         <div class="input-field col s6">
-          <input placeholder="Title of discussion" id="new_disc" type="text" class="validate">
+          <input id="new_disc" type="text" class="validate">
           <label for="club_name">Discussion Topics</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="new_club_description"> Please  provide a briefdescription of what this club will be focusing on </label>
+          <label for="new_club_description"> Brief description of what this club will be discussing </label>
         </div>
       </div>
       <div class="row">
-          <div class="start-date col l6 s12">Discussion Starts: 
+          <div class="start-date col l6 s12">
                <input type="text" class="datepicker">
+               <label for="dtp">Start Date</label>
           </div>
-          <div class="end-date col l6 s12">Discussion Ends: 
+          <div class="end-date col l6 s12"> 
                <input type="text" class="datepicker">
+                <label for="dtp">End Date</label>
           </div>
       </div>
+    </form>
+    <div class="center-align">
       <button class="btn waves-effect waves-light" type="submit" id="add_movie_btn" name="action">Add Movie!
         <i class="fas fa-video"></i>
       </button>
-    </form>
+      </div>
   </div>
 </div>
+
+
+<script>
+</script>
+

@@ -56,6 +56,13 @@ align-content: center;
   font-family: 'Limelight', cursive;
 }
 
+.heading{
+  color: white;
+  font-family: 'Limelight', cursive;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
 .current_discussion{
   height: auto;
   border: 1px solid rgba(255, 255, 255, 0.8); 
@@ -109,8 +116,22 @@ background-color: #d1d2d4;
   margin-bottom: 1%;
 }
 
-footer{
+.main-body{
+  margin-top:3%;
+  margin-bottom: 15%;
+}
+
+.footer-copyright{
+  position: relative;
+  right: 0;
   bottom: 0;
+  left: 0;
+  margin-top: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  height: 60px;
 }
 
 .single-post:hover{
@@ -141,3 +162,127 @@ footer{
   margin-top: 2%;
   margin-bottom:2%;
 }
+
+.datepicker{
+  color:white;
+}
+
+#add_movie_btn{
+  margin-top: 3%;
+}
+
+/* To fix cut off dates from materialize datepicker */
+.datepicker-controls .select-month input { width: 5em; }
+.datepicker-date-display .date-text{ font-size: 2.2rem; }
+
+
+/* Background Spotlights */
+  /* Mobile Spotlights */
+      @media screen and (max-width: 640px){
+        /* lamp on right */
+        .lamp {
+          position: fixed;
+          width: 80px;
+          height: 2400px;
+          background-image: radial-gradient(ellipse, rgba(82,116,168,0.5), rgba(82,116,168,0.2) 25%, rgba(82,116,168,0) 50%);
+          right: -10vw;
+          bottom: -80vh;
+          transform: rotateX(30deg) perspective(23vh);
+          animation: rotate_spotlight 25s linear infinite;
+        transform-origin: center bottom;
+        z-index: -1;
+        }
+
+        /* lamp on left */
+        .lamp2 {
+          position: fixed;
+          width: 80px;
+          height: 2400px;
+          background-image: radial-gradient(ellipse, rgba(82,116,168,0.5), rgba(82,116,168,0.2) 25%, rgba(82,116,168,0) 50%);
+          left: -10vw;
+          bottom: -80vh;
+          transform: rotateX(30deg) perspective(23vh);
+          animation: rotate_spotlight2 25s linear infinite;
+        transform-origin: center bottom;
+        z-index: -1;
+        }
+
+        @keyframes rotate_spotlight {
+          0% {
+            transform: rotate(0deg);
+          }
+          50% {
+            transform: rotate(-30deg);
+          }
+          100% {
+            transform: rotate(0deg) 
+          }
+        }
+
+        @keyframes rotate_spotlight2 {
+          0% {
+            transform: rotate(0deg) 
+          }
+          50% {
+            transform: rotate(30deg);
+          }
+          100% {
+            transform: rotate(0deg) 
+          }
+        }
+      }
+  
+  /* Desktop Spotlights */
+  @media screen and (min-width: 980px){
+    /* lamp on right */
+    .lamp {
+      position: fixed;
+      width: 110px;
+      height: 2400px;
+      background-image: radial-gradient(ellipse, rgba(82,116,168,0.5), rgba(82,116,168,0.2) 25%, rgba(82,116,168,0) 50%);
+      right: -10vw;
+      bottom: -80vh;
+      transform: rotateX(30deg) perspective(23vh);
+      animation: rotate_spotlight 25s linear infinite;
+    transform-origin: center bottom;
+    z-index: -1;
+    }
+
+    /* lamp on left */
+    .lamp2 {
+      position: fixed;
+      width: 110px;
+      height: 2400px;
+      background-image: radial-gradient(ellipse, rgba(82,116,168,0.5), rgba(82,116,168,0.2) 25%, rgba(82,116,168,0) 50%);
+      left: -10vw;
+      bottom: -80vh;
+      transform: rotateX(30deg) perspective(23vh);
+      animation: rotate_spotlight2 25s linear infinite;
+    transform-origin: center bottom;
+    z-index: -1;
+    }
+
+    @keyframes rotate_spotlight {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-45deg);
+      }
+      100% {
+        transform: rotate(0deg) 
+      }
+    }
+
+    @keyframes rotate_spotlight2 {
+      0% {
+        transform: rotate(0deg) 
+      }
+      50% {
+        transform: rotate(45deg);
+      }
+      100% {
+        transform: rotate(0deg) 
+      }
+    }
+  }

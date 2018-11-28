@@ -11,3 +11,9 @@ $(".club").on("click", function() {
     window.location.href = "/club/" + clubid;
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.datepicker');
+  var instances = M.Datepicker.init(elems, String);
+});
+
