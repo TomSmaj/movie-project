@@ -1,0 +1,17 @@
+<!--including clubId in class field so we'll be able to identify which club is bein click -->
+<div class="club container current_discussion" clubId="{{clubId}}">
+    <div class="row">
+        <div class="col l1 s1 offset-1 film-strip">
+            <img src="/public/images/film.jpg">
+        </div>
+        <div class="col l7 s7 main-col">
+            <h4 class="black-text">{{name}} </h4>
+            <h5>Description:</h5> 
+            <p>{{description}}</p>
+        </div>
+        <div class="col l4 s4 valign-wrapper" id="poster">
+            {{!-- ?? How to link image from url href ?? --}}
+            {{!-- <img class="responsive-img poster" src="{{}}"> --}}
+        </div>
+    </div>
+</div>

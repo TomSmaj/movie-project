@@ -23,13 +23,11 @@
   </div>
       <!--   Movie Club Card   -->
       <ul>
-      {{#each group}}
-
-      {{!-- discussion-card partial looped over here? --}}
-
+      {{#each clubs}}
+      {{>club-card-2}}
       {{/each }}
       </ul>
-      {{>club-card }}
+      
     </div>
   </div>
 
@@ -37,3 +35,4 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
