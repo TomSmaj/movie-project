@@ -13,19 +13,7 @@ module.exports = function(sequelize, Sequelize) {
   }); // there is also a 'createdAt' and 'updatedAt' field that is being autocreated by sequelize
 
   // Club.associate = function(models) {
-<<<<<<< HEAD
   //   Club.belongsToMany(models.User, { through: "ClubUser" });
-=======
-    // We're saying that a Club should belong to a User
-    // A Club can't be created without a User due to the foreign key constraint
-
-  //   Club.belongsToMany(models.User, {
-  //     through: "ClubUser",
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
->>>>>>> 0720e33ed4c4bcfd0155842599b651d6fa447f9e
   // };
 
   return Club;

@@ -33,10 +33,6 @@ module.exports = function(app) {
   // });
 
   app.get("/club/:clubid", function(req, res) {
-<<<<<<< HEAD
-=======
-    let clubData, discussionData;
->>>>>>> 0720e33ed4c4bcfd0155842599b651d6fa447f9e
     db.Club.findOne({
       where: { clubId: req.params.clubid },
       include: [
@@ -45,22 +41,6 @@ module.exports = function(app) {
         }
       ]
     }).then(data => {
-<<<<<<< HEAD
-      res.json(data);
-      //change me back to res.render
-      //make sure this object is formatted as a hbrs object
-    });
-  });
-
-  app.get("/discussion/:discussionid", function(req, res) {
-    db.Post.findAll({
-      where: { DiscussionDiscussionId: req.params.discussionid }
-    }).then(dbPosts => {
-      res.render("discussion", {
-        posts: dbPosts
-      });
-    });
-=======
       res.render("club", {
         discs: data
       });
@@ -99,7 +79,7 @@ module.exports = function(app) {
     }).then(dbPost => {
       // res.json(dbPost);
       res.render("discussion", {
-      userComment: dbPost
+        userComment: dbPost
       });
     });
   });
@@ -114,15 +94,12 @@ module.exports = function(app) {
   //     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
   //   });
 
-
   // Nav bar links - not needing to make db call until submit button clicked
   app.get("/add-club", function(req, res) {
-      res.render("add-club");
+    res.render("add-club");
   });
 
   app.get("/add-movie", function(req, res) {
     res.render("add-movie");
->>>>>>> 0720e33ed4c4bcfd0155842599b651d6fa447f9e
   });
-
 };
