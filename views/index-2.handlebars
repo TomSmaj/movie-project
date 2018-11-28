@@ -13,10 +13,10 @@
         <h5 class="header col s12">A place for cinephiles to come together and have meaningful discussions on
           movies, directors and all things cinema</h5>
       </div>
-      {{!-- <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="login-button" class="btn-large waves-effect waves-light orange">Login
-          to Start Discussing</a>
-      </div> --}}
+      <div class="row center">
+        <button href="http://materializecss.com/getting-started.html" id="login-button" class="btn-large waves-effect waves-light orange" onclick="googleSignIn()">Login
+          to Start Discussing</button>
+      </div>
       <br><br>
 
     </div>
@@ -35,4 +35,35 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAMSMRy70ebQVjud8ka4356YPorrb4FYHY",
+    authDomain: "reel-talk-app.firebaseapp.com",
+    databaseURL: "https://reel-talk-app.firebaseio.com",
+    projectId: "reel-talk-app",
+    storageBucket: "reel-talk-app.appspot.com",
+    messagingSenderId: "76965363317"
+  };
+  firebase.initializeApp(config);
+
+  function googleSignIn() {
+    let provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        console.log(result);
+        console.log("Google account successfully linked!")
+    }).catch(function(err) {
+        console.log(err);
+        console.log("login failed")
+    })
+};
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log(user.uid);
+  }
+});
+</script>
 
