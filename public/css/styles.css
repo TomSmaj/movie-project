@@ -81,6 +81,7 @@ align-content: center;
   height: auto;
   border: 1px solid rgba(255, 255, 255, 0.8); 
   margin-bottom: 2%;
+  background-color: #d1d2d4;
 }
 
 .film-strip{
@@ -98,23 +99,25 @@ align-content: center;
 }
 
 .showing-text{
+  color: #ebbb4a;
   font-family: 'Limelight', cursive; 
+  z-index: 1000;
   text-shadow:
-  0 1px #808d93,
+  1px 1px #212323,
   -1px 0 #cdd2d5,
-  -1px 2px #808d93,
+  -1px 2px #657075,
   -2px 1px #cdd2d5,
-  -2px 3px #808d93,
+  -2px 3px #657075,
   -3px 2px #cdd2d5,
-  -3px 4px #808d93,
+  -3px 4px #657075,
   -4px 3px #cdd2d5,
-  -4px 5px #808d93,
+  -4px 5px #657075,
   -5px 4px #cdd2d5,
-  -5px 6px #808d93,
+  -5px 6px #657075,
   -6px 5px #cdd2d5,
-  -6px 7px #808d93,
+  -6px 7px #657075,
   -7px 6px #cdd2d5,
-  -7px 8px #808d93,
+  -7px 8px #657075,
   -8px 7px rgb(205, 210, 213);
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -168,6 +171,15 @@ background-color: #d1d2d4;
   color: #f7ee8b;
   margin-bottom: 1%;
 }
+
+.display_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  border: 5px dotted rgba(213, 126, 0, 1);
+  }
+
 
 .main-body{
   margin-top:3%;
@@ -247,6 +259,11 @@ background-color: #d1d2d4;
 /* Background Spotlights */
   /* Mobile Spotlights */
       @media screen and (max-width: 640px){
+        .showing-text{
+          font-size: 25px;
+          letter-spacing: .1em; /* Adjust as needed */
+        }
+
         /* lamp on right */
         .lamp {
           position: fixed;
@@ -300,8 +317,23 @@ background-color: #d1d2d4;
         }
       }
   
+
+  @media screen and (min-width: 768px){
+    .showing-text{
+      font-size: 30px;
+      letter-spacing: .15em; /* Adjust as needed */
+    }
+  }
+
+
   /* Desktop Spotlights */
   @media screen and (min-width: 980px){
+
+    .showing-text{
+      font-size: 40px;
+      letter-spacing: .2em; /* Adjust as needed */
+    }
+
     /* lamp on right */
     .lamp {
       position: fixed;
