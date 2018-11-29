@@ -20,11 +20,7 @@ $("#submit_post").on("click", function(e) {
   var newPost = {
     title: title.val().trim(),
     text: text.val().trim(),
-<<<<<<< HEAD
-    discussionId: discArr[4],
-=======
     discussionId: discArr[4]
->>>>>>> 428eb0721764536e51a6f4ee1554e4a7d34b0e52
     // userId: userId.val().trim(),
     // respondingTo: respondingTo.val().trim()
   };
@@ -33,11 +29,6 @@ $("#submit_post").on("click", function(e) {
 });
 
 function submitPost(Post) {
-<<<<<<< HEAD
-  $.post("/api/posts/", Post, function(res) {
-    console.log(res)
-    }).then(location.reload())
-=======
   $.ajax({
     type: "POST",
     url: "/api/posts/",
@@ -46,5 +37,4 @@ function submitPost(Post) {
       location.reload();
     }
   });
->>>>>>> 428eb0721764536e51a6f4ee1554e4a7d34b0e52
 }
