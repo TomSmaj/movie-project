@@ -5,8 +5,8 @@ $(document).ready(function() {
 var title = $("#post_title");
 var text = $("#post_text");
 var discussionId = $("#discussion_id");
-var userId = $("#user_id");
-var respondingTo = $("#responding_to");
+// var userId = $("#user_id");
+// var respondingTo = $("#responding_to");
 
 //performs a get request that navigates to the specific club page when the club card is clicked
 $("#submit_post").on("click", function(e) {
@@ -20,8 +20,8 @@ $("#submit_post").on("click", function(e) {
     title: title.val().trim(),
     text: text.val().trim(),
     discussionId: discArr[4],
-    userId: userId.val().trim(),
-    respondingTo: respondingTo.val().trim()
+    // userId: userId.val().trim(),
+    // respondingTo: respondingTo.val().trim()
   };
 
   submitPost(newPost);
@@ -30,5 +30,5 @@ $("#submit_post").on("click", function(e) {
 function submitPost(Post) {
   $.post("/api/posts/", Post, function(res) {
     console.log(res)
-    }).then(window.location.reload)
+    }).then(location.reload())
 }
