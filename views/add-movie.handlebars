@@ -14,36 +14,45 @@
           <label for="club_name">Movie Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="new_disc" type="text" class="validate">
-          <label for="club_name">Discussion Topics</label>
+          <input placeholder="Year of movie (optional)" id="movie_year" type="text" class="validate">
+          <label for="club_name">Year</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="new_club_description"> Brief description of what this club will be discussing </label>
+          <textarea id="movie-description" class="materialize-textarea"></textarea>
+          <label for="new_club_description"> Please provide a brief description of what this club will be focusing on </label>
         </div>
       </div>
       <div class="row">
-          <div class="start-date col l6 s12">
-               <input type="text" class="datepicker">
-               <label for="dtp">Start Date</label>
-          </div>
-          <div class="end-date col l6 s12"> 
-               <input type="text" class="datepicker">
-                <label for="dtp">End Date</label>
-          </div>
+        <div class="start-date col l6 s12">
+            <input type="text" class="datepicker" id="start-date">
+            <label for="dtp">Start Date</label>
+        </div>
+        <div class="end-date col l6 s12">
+            <input type="text" class="datepicker" id="end-date">
+            <label for="dtp">End Date</label>
+        </div>
       </div>
-    </form>
-    <div class="center-align">
-      <button class="btn waves-effect waves-light" type="submit" id="add_movie_btn" name="action">Add Movie!
+      <button data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" id="add_movie_btn">Add Movie!
         <i class="fas fa-video"></i>
       </button>
       </div>
   </div>
 </div>
 
-
-<script>
-</script>
-
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Confirm Movie</h4>
+        <p id="confirm-movie-title"></p>
+        <p id="confirm-movie-year"></p>
+        <p id="confirm-movie-plot"></p>
+        <div class="poster"></div>
+        <p id="confirm-discussion"></p>
+        <p id="confirm-start-date"></p>
+        <p id="confirm-end-date"></p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">That's my movie!</a>
+    </div>
+</div>

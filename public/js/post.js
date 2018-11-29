@@ -8,18 +8,23 @@ var discussionId = $("#discussion_id");
 // var userId = $("#user_id");
 // var respondingTo = $("#responding_to");
 
+let discID = window.location.href;
+let discArr = discID.split("/");
+let urlId = "discarr    " + discArr[4];
 //performs a get request that navigates to the specific club page when the club card is clicked
 $("#submit_post").on("click", function(e) {
   e.preventDefault();
   // get jquery references to the post
-  let discID = window.location.href; 
-  let discArr = discID.split("/")
-  console.log("discarr    " + discArr[4])
+  console.log();
 
   var newPost = {
     title: title.val().trim(),
     text: text.val().trim(),
+<<<<<<< HEAD
     discussionId: discArr[4],
+=======
+    discussionId: discArr[4]
+>>>>>>> 428eb0721764536e51a6f4ee1554e4a7d34b0e52
     // userId: userId.val().trim(),
     // respondingTo: respondingTo.val().trim()
   };
@@ -28,7 +33,18 @@ $("#submit_post").on("click", function(e) {
 });
 
 function submitPost(Post) {
+<<<<<<< HEAD
   $.post("/api/posts/", Post, function(res) {
     console.log(res)
     }).then(location.reload())
+=======
+  $.ajax({
+    type: "POST",
+    url: "/api/posts/",
+    data: Post,
+    success: function() {
+      location.reload();
+    }
+  });
+>>>>>>> 428eb0721764536e51a6f4ee1554e4a7d34b0e52
 }
