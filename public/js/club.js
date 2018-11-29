@@ -17,15 +17,18 @@ $(".discussion").on("click", function() {
 
 var new_club = $("#new_club");
 var new_descr = $("#new_club_description");
-// var new_admin = $("#new_admin");
+var new_admin = "none";
+if (sessionStorage.getItem("loggedInObj")) {
+  new_admin = JSON.parse(sessionStorage.getItem("loggedInObj")).username;
+}
 
 $("#add_club_btn").on("click", function(e) {
   e.preventDefault();
 
   var createClub = {
     name: new_club.val().trim(),
-    description: new_descr.val().trim()
-    // admin: new_admin
+    description: new_descr.val().trim(),
+    admin: new_admin
   };
 
   newClub(createClub);
