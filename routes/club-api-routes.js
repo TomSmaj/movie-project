@@ -31,5 +31,4 @@ module.exports = function(app) {
       res.json(dbClub);
     });
   });
-
 };
