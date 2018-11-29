@@ -18,6 +18,7 @@
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "eslint": "^4.19.1",
@@ -25,5 +26,18 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomSmaj/movie-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/TomSmaj/movie-project/issues"
+  },
+  "homepage": "https://github.com/TomSmaj/movie-project#readme"
 }

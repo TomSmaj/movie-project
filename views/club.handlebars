@@ -1,0 +1,21 @@
+<!--Title-->
+<div class="club-title">{{discs.name}}</div>
+<!--description-->
+<div class="club-description">{{discs.description}}</div>
+<!--Join Club-->
+<div class="join-club"></div>
+<!--Add Movie Button-->
+<div class="add-movie"></div>
+<!--Now Showing-->
+<div class="now-showing"></div>
+<!--Previous Films-->
+<div class="prev-films"></div>
+{{!-- to access partial --}}
+    <ul>
+    {{#each discs.Discussions }}
+    {{>discussion-card}}
+    {{/each }}
+    </ul>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/js/club.js"></script>

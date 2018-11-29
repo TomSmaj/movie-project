@@ -1,0 +1,54 @@
+<div class="container discussion_con">
+  <div class="row">
+    <div class="col l2 s2 offset-2"></div>
+    <div class="col l8 s8 ind_discussion">
+      <div class="display_box">
+        <h3 class="showing-text">Now Showing</h3>
+      </div>
+      <div class="showing-info">
+        <h3>{{userComment.movie}}</h3>
+        <h5>Discussion Starts:</h5>
+        <p>{{userComment.startDate}}</p>
+        <h5>Discussion Ends:</h5>
+        <p>{{userComment.endDate}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ind_posts">
+  {{#each userComment.Posts}}
+  {{>post-card}}
+  {{/each}}
+</div>
+<div class="col l4 s4 valign-wrapper" id="poster">
+  <img class="responsive-img poster">
+</div>
+
+{{!-- Form to add a comment post req to database --}}
+<div class="container form_post">
+  <form class="post_form">
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="My Post Name" id="post_title" type="text" class="validate">
+        <label for="first_name">Post Tite</label>
+      </div>
+      <div class="input-field col s6">
+        <input placeholder="User ID" id="user_id" type="text" class="validate">
+        <label for="first_name">User ID</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea placeholder="My thoughts on this movie were..." id="post_text" class="materialize-textarea"></textarea>
+        <label for="textarea1">Thoughts?</label>
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" id="submit_post" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
