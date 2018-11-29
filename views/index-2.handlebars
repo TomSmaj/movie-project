@@ -71,6 +71,7 @@ firebase.auth().onAuthStateChanged(user => {
       userId: user.uid,
       username: user.email
     };
+    
   $.post("api/user/", userInfo).then( function(res) {
     console.log(res);
   });
