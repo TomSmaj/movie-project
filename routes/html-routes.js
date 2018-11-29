@@ -1,10 +1,6 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
 // Dependencies
 // =============================================================
-var path = require("path");
+const db = require("../models");
 
 // Routes
 // =============================================================
@@ -13,16 +9,56 @@ module.exports = function(app) {
 
   // index route loads index.handlebars
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    db.Club.findAll({
+      order: [["createdAt", "DESC"]]
+    }).then(dbClubs => {
+      res.render("index-2", {
+        clubs: dbClubs
+      });
+    });
   });
 
-  // add-club route loads add-club.handlebars
+  app.get("/club/:clubid", function(req, res) {
+    db.Club.findOne({
+      where: { clubId: req.params.clubid },
+      include: [
+        {
+          model: db.Discussion
+        }
+      ]
+    }).then(data => {
+      res.render("club", {
+        discs: data
+      });
+    });
+  });
+
+  app.get("/discussion/:discussionId", function(req, res) {
+    db.Discussion.findOne({
+      where: { discussionId: req.params.discussionId },
+      include: [
+        {
+          model: db.Post
+        }
+      ]
+    }).then(dbPost => {
+      // res.json(dbPost);
+      res.render("discussion", {
+        userComment: dbPost
+      });
+    });
+  });
+
+  // Nav bar links - not needing to make db call until submit button clicked
   app.get("/add-club", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/add-club.handlebars"));
+    res.render("add-club");
   });
 
-  // add-movie route loads add-movie.handlebars
   app.get("/add-movie", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
+    res.render("add-movie");
+  });
+
+  app.get("/create-user", function(req, res) {
+    res.render("create-user");
   });
 };
