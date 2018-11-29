@@ -5,8 +5,8 @@ $(document).ready(function() {
 var title = $("#post_title");
 var text = $("#post_text");
 var discussionId = $("#discussion_id");
-var userId = $("#user_id");
-var respondingTo = $("#responding_to");
+// var userId = $("#user_id");
+// var respondingTo = $("#responding_to");
 
 let discID = window.location.href;
 let discArr = discID.split("/");

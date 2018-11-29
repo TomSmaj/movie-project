@@ -21,6 +21,10 @@ nav {
   box-shadow: 0 4px rgb(255, 255, 255);
 }
 
+.brand-logo{
+  font-family: 'Limelight', cursive;
+}
+
 .header {
   color: #f7ee8b;
 }
@@ -121,8 +125,10 @@ align-content: center;
     blinking-cursor .5s step-end infinite;
   }
 
-/* .reel-img{
-}   */
+.new_disc_btn{
+  color: #ebbb4a;
+  margin-top: 5%;
+}
 
   /* The typing effect */
 @keyframes typing {
@@ -218,6 +224,11 @@ background-color: #d1d2d4;
 
 .waves-light{
   background-color: #c9252f;
+}
+
+.waves-light:hover{
+  background-color: #cdd2d5;
+  color: #c9252f;
 }
 
 .datepicker{

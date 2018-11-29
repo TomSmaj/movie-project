@@ -1,9 +1,8 @@
-/* eslint-disable camelcase */
 $(document).ready(function() {
   console.log("card page ready");
 });
 
-//performs a get request that navigates to the specific club page when the club card is clicked
+// performs a get request that navigates to the specific club page when the club card is clicked
 $(".discussion").on("click", function() {
   var discussionId = $(this).attr("discussionId");
   console.log("you just clicked " + discussionId);
@@ -13,14 +12,23 @@ $(".discussion").on("click", function() {
   });
 });
 
-// To create new club forum
+// Add New Discussion within a club - button click routes user to new discussion form
+  $("#add_disc_btn").on("click", function() {
+      window.location.href = "/add-club"
+    });
 
+
+// To create new club forum
 var new_club = $("#new_club");
 var new_descr = $("#new_club_description");
+<<<<<<< HEAD
 var new_admin = "none";
 if (sessionStorage.getItem("loggedInUser")) {
   new_admin = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
 }
+=======
+var new_admin = $("#new_admin");
+>>>>>>> 0feb0eccdf30e0d48198f99c94a92a0992ab0292
 
 $("#add_club_btn").on("click", function(e) {
   e.preventDefault();
