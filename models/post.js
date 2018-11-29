@@ -6,8 +6,6 @@ module.exports = function(sequelize, Sequelize) {
       autoIncrement: true,
       primaryKey: true
     },
-    //user_id: Sequelize.INTEGER,             //the id of user that made the post
-    //discussion_id: Sequelize.INTEGER,       //the id of the discussion the post is part of
     text: Sequelize.TEXT, //text body of the post
     title: Sequelize.STRING, //(intended for a later phase) the top-leve post (of a chain of posts within a discussion) will have a title asociated with it
     respondingTo: Sequelize.INTEGER, //(intended for a later phase) the id of the post that this post is in response to

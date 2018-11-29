@@ -40,6 +40,7 @@ nav {
 
 .discussion{
   text-align: center;
+  margin-top: 5%;
 }
 
 .discussion_con{
@@ -120,9 +121,8 @@ align-content: center;
     blinking-cursor .5s step-end infinite;
   }
 
-.reel-img{
-  background-image: url(https://cdn3.iconfinder.com/data/icons/movies-and-film/85/FilmReel-512.png);
-}  
+/* .reel-img{
+}   */
 
   /* The typing effect */
 @keyframes typing {
