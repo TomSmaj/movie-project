@@ -6,8 +6,6 @@ module.exports = function(sequelize, Sequelize) {
       autoIncrement: true,
       primaryKey: true
     },
-    //club_id: Sequelize.INTEGER,            // id of the club the discussion belongs to
-    //user_id: Sequelize.INTEGER,             // the id of user that made the discussion
     text: Sequelize.TEXT, // text body of discussion (text at top of discussion providing info about what this discussion is about)
     title: Sequelize.STRING, // the title of the discussion, is visible at the top of each discussion in the list of discussion on the club page as well as the top of that specific's duscussion page
     startDate: Sequelize.DATE, // date that the actual discussion will start, it is at this date/time that the discussion is active and posts can be made

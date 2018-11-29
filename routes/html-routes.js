@@ -1,7 +1,3 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
 // Dependencies
 // =============================================================
 const db = require("../models");
@@ -22,16 +18,6 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/club/:clubid", function(req, res) {
-  //   db.Discussion.findAll({
-  //     where: { ClubClubId: req.params.clubid }
-  //   }).then(dbDisc => {
-  //     res.render("club", {
-  //       discs: dbDisc
-  //     });
-  //   });
-  // });
-
   app.get("/club/:clubid", function(req, res) {
     db.Club.findOne({
       where: { clubId: req.params.clubid },
@@ -44,29 +30,8 @@ module.exports = function(app) {
       res.render("club", {
         discs: data
       });
-      // res.json(data)
-      //change me back to res.render
-      //make sure this object is formatted as a hbrs object
     });
   });
-
-  // db.Club.findAll({
-  //     where: { clubId: req.params.clubid }
-  //   }).then(dbDisc => {
-  //      res.json(dbDisc)
-  // res.render("club", {
-  //   discs: dbDisc
-  // });
-  // })
-  // db.Discussion.findAll({
-  //   where: { ClubClubId: req.params.clubid }
-  // }).then(dbDisc => {
-  //   // res.json(dbDisc)
-  //   res.render("club", {
-  //     discs: dbDisc
-  //   });
-  // }).catch(err => console.log(err))
-  // });
 
   app.get("/discussion/:discussionId", function(req, res) {
     db.Discussion.findOne({
@@ -84,16 +49,6 @@ module.exports = function(app) {
     });
   });
 
-  // add-club route loads add-club.handlebars
-  // app.get("/add-club", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../views/add-club.handlebars"));
-  // });
-
-  // add-movie route loads add-movie.handlebars
-  //   app.get("/add-movie", function(req, res) {
-  //     res.sendFile(path.join(__dirname, "../views/add-movie.handlebars"));
-  //   });
-
   // Nav bar links - not needing to make db call until submit button clicked
   app.get("/add-club", function(req, res) {
     res.render("add-club");
@@ -101,5 +56,9 @@ module.exports = function(app) {
 
   app.get("/add-movie", function(req, res) {
     res.render("add-movie");
+  });
+
+  app.get("/create-user", function(req, res) {
+    res.render("create-user");
   });
 };
