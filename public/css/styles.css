@@ -57,6 +57,50 @@ align-content: center;
   box-shadow: inset #d1d2d4 0.5px 0.5px 20px 0px;
 }
 
+::placeholder { 
+  opacity: 0.5;
+}
+
+input[type=text]:focus {
+  border-bottom: 1px solid #c9252f!important;
+  box-shadow: 0 1px 0 0 #c9252f!important;
+}
+
+input.valid[type=text]:not(.browser-default) {
+  border-bottom: 1px solid #f7ee8b!important;
+  box-shadow: 0 1px 0 0 #f7ee8b!important;
+}
+
+input[type=text]:focus+label {
+  color: #c9252f!important;
+}
+
+input[type=text].valid+label {
+  color: #f7ee8b!important;
+}
+
+textarea.materialize-textarea:focus {
+  border-bottom: 1px solid #c9252f!important;
+  box-shadow: 0 1px 0 0 #c9252f!important;
+}
+
+textarea.materialize-textarea:focus {
+  border-bottom: 1px solid #c9252f!important;
+  box-shadow: 0 1px 0 0 #c9252f!important;
+}
+
+textarea.materialize-textarea:focus+label {
+  color: #c9252f!important;
+}
+textarea.materialize-textarea.valid+label {
+  color: #f7ee8b!important;
+}
+
+textarea.materialize-textarea.valid {
+  border-bottom: 1px solid #f7ee8b!important;
+  box-shadow: 0 1px 0 0 #f7ee8b!important;
+}
+
 .fa-user-circle{
   padding-top: 15px;
 }
