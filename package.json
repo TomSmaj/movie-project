@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "node-handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
@@ -28,21 +29,49 @@
     "prettier": "^1.13.7"
 =======
   "name": "movie-project",
+=======
+  "name": "node-handlebars-boilerplate",
+>>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57
   "version": "1.0.0",
-  "description": "MOVIE PROJECT",
-  "main": "index.js",
+  "description": "Project 2 Starter",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "lint": "eslint **/*.js --quiet",
+    "fix": "eslint --fix .",
+    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.7"
+  },
+  "directories": {
+    "test": "test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TomSmaj/movie-project.git"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/TomSmaj/movie-project/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/TomSmaj/movie-project#readme",
   "devDependencies": {
     "eslint": "^5.9.0",
@@ -52,4 +81,7 @@
     "eslint-plugin-react": "^7.11.1"
 >>>>>>> 8fe8075c00b7c17da604d0804ac9ddcbc035c61d
   }
+=======
+  "homepage": "https://github.com/TomSmaj/movie-project#readme"
+>>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57
 }

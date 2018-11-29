@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
@@ -97,3 +98,24 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+=======
+$(document).ready(function() {
+  console.log("index ready");
+  // post request to send back image link to render on the template
+});
+
+//performs a get request that navigates to the specific club page when the club card is clicked
+$(".club").on("click", function() {
+  var clubid = $(this).attr("clubId");
+  console.log("clubId: " + clubid + " has been clicked.");
+  $.get("/club/" + clubid).then(function() {
+    window.location.href = "/club/" + clubid;
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.datepicker');
+  var instances = M.Datepicker.init(elems, String);
+});
+
+>>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57

@@ -36,7 +36,30 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+<<<<<<< HEAD
+=======
+// basic associations
+db.Discussion.belongsTo(db.Club, {foreignKey: 'clubId'});
+db.Club.hasMany(db.Discussion, {foreignKey: 'clubId'});
+db.Post.belongsTo(db.Discussion, {foreignKey: 'discussionId'});
+db.Discussion.hasMany(db.Post, {foreignKey: 'discussionId'});
+
+//One post/discussion to One User 
+db.Post.belongsTo(db.User, {foreignKey: 'userId'});
+db.User.hasMany(db.Post, {foreignKey: 'userId'});
+db.Discussion.belongsTo(db.User, {foreignKey: 'userId'});
+db.User.hasMany(db.Discussion, {foreignKey: 'userId'});
+
+//Many Users to Many Clubs
+// db.Club.belongsToMany(db.User, {through: 'ClubUser'});
+// db.User.belongsToMany(db.Club, {through: 'ClubUser'});
+
+>>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+<<<<<<< HEAD
+=======
+
+>>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57
