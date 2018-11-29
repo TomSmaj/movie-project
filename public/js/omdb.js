@@ -21,8 +21,10 @@ function displayMovieInfo() {
     var year = response.Year;
     var poster = response.Poster;
     var plot = response.Plot;
-    var image = $("<img>").attr("src", poster).addClass("movie-poster");
-    
+    var image = $("<img>")
+      .attr("src", poster)
+      .addClass("movie-poster");
+
     $("#confirm-movie-title").text(title);
     $("#confirm-movie-year").text(year);
     $("#confirm-movie-plot").text(plot);
@@ -50,19 +52,13 @@ $("#add_discussion_btn").on("click", function(e) {
   console.log(poster);
   var text = $("#confirm-discussion")
     .text()
-    .trim()
-    .split()
-    .splice(0, 2);
+    .replace("Discussion focus: ", "");
   var startDate = $("#confirm-start-date")
     .text()
-    .trim()
-    .split()
-    .splice(0, 2);
+    .replace("Start date: ", "");
   var endDate = $("#confirm-end-date")
     .text()
-    .trim()
-    .split()
-    .splice(0, 2);
+    .replace("End date: ", "");
   var createDiscussion = {
     text: text,
     startDate: startDate,
