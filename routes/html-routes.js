@@ -1,7 +1,3 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
 // Dependencies
 // =============================================================
 const db = require("../models");
@@ -60,5 +56,9 @@ module.exports = function(app) {
 
   app.get("/add-movie", function(req, res) {
     res.render("add-movie");
+  });
+
+  app.get("/create-user", function(req, res) {
+    res.render("create-user");
   });
 };

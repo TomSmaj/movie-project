@@ -49,8 +49,8 @@ db.Discussion.belongsTo(db.User, {foreignKey: 'userId'});
 db.User.hasMany(db.Discussion, {foreignKey: 'userId'});
 
 //Many Users to Many Clubs
-db.Club.belongsToMany(db.User, {through: 'ClubUser'});
-db.User.belongsToMany(db.Club, {through: 'ClubUser'});
+// db.Club.belongsToMany(db.User, {through: 'ClubUser'});
+// db.User.belongsToMany(db.Club, {through: 'ClubUser'});
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
