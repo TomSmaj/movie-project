@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Niramit|Quicksand|Raleway');
 
 .icon-block {
   padding: 0 15px;
+}
+
+p{
+  font-family: 'Quicksand', sans-serif;
 }
 
 .icon-block .material-icons {
@@ -25,7 +30,7 @@ nav {
 }
 
 .title {
-  font-family: 'Limelight', cursive ;
+  font-family: 'Limelight', cursive;
   color: #ebbb4a;
 }
 
@@ -35,6 +40,7 @@ nav {
 
 .discussion{
   text-align: center;
+  margin-top: 5%;
 }
 
 .discussion_con{
@@ -44,11 +50,15 @@ align-content: center;
 
 .ind_discussion{
   text-align: center;
-  background-color: #d1d2d4; 
 }
 
 .post{
-  background-color:  #ebbb4a
+  background-color:  rgba(236, 184, 62, 0.685);
+  box-shadow: inset #d1d2d4 0.5px 0.5px 20px 0px;
+}
+
+.fa-user-circle{
+  padding-top: 15px;
 }
 
 .discussion-title{
@@ -81,6 +91,43 @@ align-content: center;
   height: auto;
   border: 1px solid white; 
   margin-bottom: 2%;
+}
+
+.showing-text{
+  font-family: 'Limelight', cursive; 
+  text-shadow:
+  0 1px #808d93,
+  -1px 0 #cdd2d5,
+  -1px 2px #808d93,
+  -2px 1px #cdd2d5,
+  -2px 3px #808d93,
+  -3px 2px #cdd2d5,
+  -3px 4px #808d93,
+  -4px 3px #cdd2d5,
+  -4px 5px #808d93,
+  -5px 4px #cdd2d5,
+  -5px 6px #808d93,
+  -6px 5px #cdd2d5,
+  -6px 7px #808d93,
+  -7px 6px #cdd2d5,
+  -7px 8px #808d93,
+  -8px 7px rgb(205, 210, 213);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .2em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blinking-cursor .5s step-end infinite;
+  }
+
+/* .reel-img{
+}   */
+
+  /* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
 .main-col{
@@ -134,12 +181,13 @@ background-color: #d1d2d4;
   height: 60px;
 }
 
-.single-post:hover{
+/* Hover disabled until we have it linked to user profile */
+/* .single-post:hover{
   transform: translateY(-0.2em);
   box-shadow: 
     0.1em 0.1em 0.1em 0.1em #f7ee8b, 
     inset -2em -1em 5em 0.1em #f7ee8b;
-}
+} */
 
 .cur_disc_row:hover {
   box-shadow: 
@@ -158,9 +206,18 @@ background-color: #d1d2d4;
   transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in;
 }
 
+.showing-info{
+  color: #d1d2d4;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .form_post{
-  margin-top: 2%;
+  margin-top: 5%;
   margin-bottom:2%;
+}
+
+.waves-light{
+  background-color: #c9252f;
 }
 
 .datepicker{
