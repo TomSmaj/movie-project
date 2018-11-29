@@ -2,10 +2,8 @@
 
 function displayMovieInfo() {
   const movie = $("#new_movie").val();
-  console.log(movie);
   const date = $("#movie_year").val();
   const discussion = $("#movie-description").val();
-  console.log(discussion);
   const start = $("#start-date").val();
   const end = $("#end-date").val();
   var reqString = "http://www.omdbapi.com/?apikey=trilogy&t=" + movie;
@@ -19,15 +17,12 @@ function displayMovieInfo() {
     url: reqString,
     method: "GET"
   }).then(function(response) {
-    console.log(response);
     var title = response.Title;
-    console.log(title);
     var year = response.Year;
     var poster = response.Poster;
     var plot = response.Plot;
-    console.log(poster);
-    var image = $("<img>").attr("src", poster);
-    // TODO: Send this back to the front end
+    var image = $("<img>").attr("src", poster).addClass("movie-poster");
+    
     $("#confirm-movie-title").text(title);
     $("#confirm-movie-year").text(year);
     $("#confirm-movie-plot").text(plot);
@@ -51,7 +46,8 @@ $("#add_discussion_btn").on("click", function(e) {
   var plot = $("#confirm-movie-plot")
     .text()
     .trim();
-  var poster = $(".poster").attr("src");
+  var poster = $(".movie-poster").prop("src");
+  console.log(poster);
   var text = $("#confirm-discussion")
     .text()
     .trim()
