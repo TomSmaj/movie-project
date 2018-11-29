@@ -1,30 +1,13 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "node": true
-=======
     "env": {
         "browser": true,
         "commonjs": true,
         "node": true,
         "es6": true
->>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57
     },
     "extends": "prettier",
     "plugins": [
         "prettier"
-<<<<<<< HEAD
-      ],
-    "rules": {
-        "no-duplicate-case":"error",
-        "no-empty":"error",
-        "no-extra-semi":"error",
-        "no-func-assign": "error",
-        "no-irregular-whitespace":"error",
-=======
     ],
     "rules": {
         "no-duplicate-case": "error",
@@ -32,7 +15,6 @@
         "no-extra-semi": "error",
         "no-func-assign": "error",
         "no-irregular-whitespace": "error",
->>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57
         "no-unreachable": "error",
         "curly": "error",
         "dot-notation": "error",
@@ -60,11 +42,3 @@
         "prettier/prettier": "error"
     }
 }
-<<<<<<< HEAD
-=======
-    "extends": "airbnb"
-}
->>>>>>> 8fe8075c00b7c17da604d0804ac9ddcbc035c61d
-=======
-
->>>>>>> da26bc76e9b1006660a8a22d5799a24ad4762d57
