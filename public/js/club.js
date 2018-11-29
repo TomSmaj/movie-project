@@ -18,8 +18,8 @@ $(".discussion").on("click", function() {
 var new_club = $("#new_club");
 var new_descr = $("#new_club_description");
 var new_admin = "none";
-if (sessionStorage.getItem("loggedInObj")) {
-  new_admin = JSON.parse(sessionStorage.getItem("loggedInObj")).username;
+if (sessionStorage.getItem("loggedInUser")) {
+  new_admin = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
 }
 
 $("#add_club_btn").on("click", function(e) {
@@ -34,8 +34,18 @@ $("#add_club_btn").on("click", function(e) {
   newClub(createClub);
 });
 
+// function newClub(newClubName) {
+//   $.post("api/clubs/", newClubName, function(res) {
+//     console.log(res);
+//   }).then((window.location.href = "localhost:3000"));
+
 function newClub(newClubName) {
-  $.post("api/clubs/", newClubName, function(res) {
-    console.log(res);
-  }).then((window.location.href = "localhost:3000"));
+  $.ajax({
+    type: "POST",
+    url: "/api/clubs/",
+    data: newClubName,
+    success: function() {
+      window.location.href = "/";
+    }
+  });
 }
