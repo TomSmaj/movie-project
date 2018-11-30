@@ -13,22 +13,17 @@ $(".discussion").on("click", function() {
 });
 
 // Add New Discussion within a club - button click routes user to new discussion form
-  $("#add_disc_btn").on("click", function() {
-      window.location.href = "/add-club"
-    });
-
+$("#add_disc_btn").on("click", function() {
+  window.location.href = "/add-club";
+});
 
 // To create new club forum
 var new_club = $("#new_club");
 var new_descr = $("#new_club_description");
-<<<<<<< HEAD
 var new_admin = "none";
 if (sessionStorage.getItem("loggedInUser")) {
   new_admin = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
 }
-=======
-var new_admin = $("#new_admin");
->>>>>>> 0feb0eccdf30e0d48198f99c94a92a0992ab0292
 
 $("#add_club_btn").on("click", function(e) {
   e.preventDefault();
@@ -41,11 +36,6 @@ $("#add_club_btn").on("click", function(e) {
 
   newClub(createClub);
 });
-
-// function newClub(newClubName) {
-//   $.post("api/clubs/", newClubName, function(res) {
-//     console.log(res);
-//   }).then((window.location.href = "localhost:3000"));
 
 function newClub(newClubName) {
   $.ajax({

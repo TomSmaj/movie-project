@@ -1,5 +1,11 @@
 $(document).ready(function() {
   console.log("index ready");
+
+  if (sessionStorage.getItem("loggedInUser")) {
+    poster = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
+    $(".logged-in-nav").text(poster);
+  }
+
   // post request to send back image link to render on the template
   $(".modal").modal();
 });
