@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 $(document).ready(function() {
   console.log("card page ready");
 });
@@ -14,7 +15,9 @@ $(".discussion").on("click", function() {
 
 // Add New Discussion within a club - button click routes user to new discussion form
 $("#add_disc_btn").on("click", function() {
-  window.location.href = "/add-club";
+  let cid = window.location.href.split("/")[4];
+  sessionStorage.setItem("clubId", cid);
+  window.location.href = "/add-movie";
 });
 
 // To create new club forum

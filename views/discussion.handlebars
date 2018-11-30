@@ -7,6 +7,7 @@
       </div>
       <div class="showing-info">
         <h3>{{userComment.movie}}</h3>
+        <img class="responsive-img poster" src={{userComment.moviePoster}}>
         <h5>Discussion Starts:</h5>
         <p>{{userComment.startDate}}</p>
         <h5>Discussion Ends:</h5>
@@ -21,9 +22,6 @@
   {{>post-card}}
   {{/each}}
 </div>
-<div class="col l4 s4 valign-wrapper" id="poster">
-  <img class="responsive-img poster">
-</div>
 
 {{!-- Form to add a comment post req to database --}}
 <div class="container form_post">
@@ -31,7 +29,7 @@
     <div class="row">
       <div class="input-field col s6">
         <input placeholder="My Post Name" id="post_title" type="text" class="validate">
-        <label for="first_name">Post Tite</label>
+        <label for="first_name">Post Title</label>
       </div>
       <div class="input-field col s6">
         <input placeholder="User ID" id="user_id" type="text" class="validate">
