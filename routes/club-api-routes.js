@@ -26,10 +26,10 @@ module.exports = function(app) {
   app.post("/api/clubs", (req, res) => {
     db.Club.create({
       name: req.body.name,
-      description: req.body.description
+      description: req.body.description,
+      admin: req.body.admin
     }).then(dbClub => {
       res.json(dbClub);
     });
   });
-
 };
