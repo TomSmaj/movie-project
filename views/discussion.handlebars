@@ -7,6 +7,7 @@
       </div>
       <div class="showing-info">
         <h3>{{userComment.movie}}</h3>
+        <img class="responsive-img poster" src={{userComment.moviePoster}}>
         <h5>Discussion Starts:</h5>
         <p>{{userComment.startDate}}</p>
         <h5>Discussion Ends:</h5>
@@ -21,27 +22,20 @@
   {{>post-card}}
   {{/each}}
 </div>
-<div class="col l4 s4 valign-wrapper" id="poster">
-  <img class="responsive-img poster">
-</div>
 
 {{!-- Form to add a comment post req to database --}}
 <div class="container form_post">
   <form class="post_form">
     <div class="row">
       <div class="input-field col s6">
-        <input placeholder="My Post Name" id="post_title" type="text" class="validate">
-        <label for="first_name">Post Tite</label>
-      </div>
-      <div class="input-field col s6">
-        <input placeholder="User ID" id="user_id" type="text" class="validate">
-        <label for="first_name">User ID</label>
+        <input id="post_title" type="text" class="validate white-text">
+        <label for="first_name">Post Title</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <textarea placeholder="My thoughts on this movie were..." id="post_text" class="materialize-textarea"></textarea>
-        <label for="textarea1">Thoughts?</label>
+        <textarea id="post_text" class="materialize-textarea white-text validate"></textarea>
+        <label for="textarea1">Post Text</label>
       </div>
     </div>
     <button class="btn waves-effect waves-light" id="submit_post" type="submit" name="action">Submit
