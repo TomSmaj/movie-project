@@ -23,22 +23,30 @@ $("#add_disc_btn").on("click", function() {
 // To create new club forum
 var new_club = $("#new_club");
 var new_descr = $("#new_club_description");
-var new_admin = $("#new_admin");
+var new_admin = "none";
+if (sessionStorage.getItem("loggedInUser")) {
+  new_admin = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
+}
 
 $("#add_club_btn").on("click", function(e) {
   e.preventDefault();
 
   var createClub = {
     name: new_club.val().trim(),
-    description: new_descr.val().trim()
-    // admin: new_admin
+    description: new_descr.val().trim(),
+    admin: new_admin
   };
 
   newClub(createClub);
 });
 
 function newClub(newClubName) {
-  $.post("api/clubs/", newClubName, function(res) {
-    console.log(res);
-  }).then((window.location.href = "localhost:3000"));
+  $.ajax({
+    type: "POST",
+    url: "/api/clubs/",
+    data: newClubName,
+    success: function() {
+      window.location.href = "/";
+    }
+  });
 }
