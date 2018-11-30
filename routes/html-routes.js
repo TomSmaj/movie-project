@@ -61,4 +61,11 @@ module.exports = function(app) {
   app.get("/create-user", function(req, res) {
     res.render("create-user");
   });
+
+  // $("#add_disc_btn").on("click", function() {
+  //   app.get("/add-movie/", function(req, res) {
+  //     res.render("add-movie");
+  //   });
+  // });
+
 };
