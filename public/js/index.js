@@ -4,6 +4,7 @@ $(document).ready(function() {
   // grabbing username from session storage and putting it in navbar
   if (sessionStorage.getItem("loggedInUser")) {
     poster = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
+    $(".logged-in-nav").text(opster);
    }
 
   // post request to send back image link to render on the template
@@ -24,4 +25,3 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Datepicker.init(elems, String);
 });
 
-$(".logged-in-nav")

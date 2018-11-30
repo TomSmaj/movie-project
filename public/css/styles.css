@@ -173,6 +173,7 @@ background-color: #d1d2d4;
   margin-bottom: 1%;
 }
 
+<<<<<<< HEAD
 .display_box{
   display: flex;
   justify-content: center;
@@ -181,15 +182,36 @@ background-color: #d1d2d4;
   border: 5px dotted rgba(213, 126, 0, 1);
   }
 
+=======
+li{
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+#logo-container{
+  margin-left: 15%;
+}
+
+#navbar{
+  margin-right: 3%;
+}
+
+#username-nav{
+  margin-right: 4px;
+}
+>>>>>>> 7ee73cf245aa87703c1c10391d30bbf00da4c8c7
 
 .main-body{
   margin-top:3%;
   margin-bottom: 15%;
   padding-bottom: 20px;
+<<<<<<< HEAD
 }
 
 .logged-in-nav{
   padding-left: 10px;
+=======
+>>>>>>> 7ee73cf245aa87703c1c10391d30bbf00da4c8c7
 }
 
 .footer-copyright{
