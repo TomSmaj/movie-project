@@ -269,6 +269,8 @@ li{
   text-align: center;
   width: 100%;
   height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Hover disabled until we have it linked to user profile */
