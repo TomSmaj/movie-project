@@ -14,14 +14,14 @@ $(".discussion").on("click", function() {
 
 // Add New Discussion within a club - button click routes user to new discussion form
   $("#add_disc_btn").on("click", function() {
-      window.location.href = "/add-club"
+      window.location.href = "/add-movie"
     });
 
 
 // To create new club forum
 var new_club = $("#new_club");
 var new_descr = $("#new_club_description");
-var new_admin = $("#new_admin");
+var new_admin = window.localStorage;
 
 $("#add_club_btn").on("click", function(e) {
   e.preventDefault();

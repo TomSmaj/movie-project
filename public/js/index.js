@@ -1,5 +1,11 @@
 $(document).ready(function() {
   console.log("index ready");
+
+  // grabbing username from session storage and putting it in navbar
+  if (sessionStorage.getItem("loggedInUser")) {
+    poster = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
+   }
+
   // post request to send back image link to render on the template
   $(".modal").modal();
 });
@@ -18,3 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Datepicker.init(elems, String);
 });
 
+$(".logged-in-nav")
