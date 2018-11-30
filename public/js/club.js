@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable quotes */
 $(document).ready(function() {
   console.log("card page ready");
