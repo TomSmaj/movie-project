@@ -7,6 +7,7 @@
       </div>
       <div class="showing-info">
         <h3>{{userComment.movie}}</h3>
+        <img class="responsive-img poster" src={{userComment.moviePoster}}>
         <h5>Discussion Starts:</h5>
         <p>{{userComment.startDate}}</p>
         <h5>Discussion Ends:</h5>
@@ -20,9 +21,6 @@
   {{#each userComment.Posts}}
   {{>post-card}}
   {{/each}}
-</div>
-<div class="col l4 s4 valign-wrapper" id="poster">
-  <img class="responsive-img poster">
 </div>
 
 {{!-- Form to add a comment post req to database --}}

@@ -18,7 +18,9 @@ module.exports = function(app) {
       movie: req.body.movie,
       moviePoster: req.body.moviePoster,
       moviePlot: req.body.moviePlot,
-      movieYear: req.body.movieYear
+      movieYear: req.body.movieYear,
+      clubId: req.body.clubId,
+      title: req.body.title
     }).then(dbDiscussion => {
       res.json(dbDiscussion);
     });
