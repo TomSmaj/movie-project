@@ -1,10 +1,11 @@
 $(document).ready(function() {
   console.log("index ready");
 
+  // grabbing username from session storage and putting it in navbar
   if (sessionStorage.getItem("loggedInUser")) {
     poster = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
     $(".logged-in-nav").text(poster);
-  }
+   }
 
   // post request to send back image link to render on the template
   $(".modal").modal();
@@ -19,7 +20,8 @@ $(".club").on("click", function() {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll(".datepicker");
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.datepicker');
   var instances = M.Datepicker.init(elems, String);
 });
+
