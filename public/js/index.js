@@ -4,7 +4,7 @@ $(document).ready(function() {
   // grabbing username from session storage and putting it in navbar
   if (sessionStorage.getItem("loggedInUser")) {
     poster = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
-    $(".logged-in-nav").text(opster);
+    $(".logged-in-nav").text(poster);
    }
 
   // post request to send back image link to render on the template
