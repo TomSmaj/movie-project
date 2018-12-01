@@ -35,6 +35,6 @@ Dedicated profile page for all users || Create administative features for clubs 
 * Sequelize
 * Heroku
 
-## Wanna check it out for yourself? Click ![here!!](https://reel-talk-app.herokuapp.com)
+## Wanna check it out for yourself? Click [here!!](https://reel-talk-app.herokuapp.com)
 
-[reel-talk](/public/images/ReelTalk.gif)
+![reel-talk](/public/images/ReelTalk.gif)
