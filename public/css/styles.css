@@ -57,11 +57,15 @@ align-content: center;
 }
 
 .post{
-  background-color:  rgba(236, 184, 62, 0.685);
+  background-color: #ebbb4a;
+  opacity: 0.8;
   box-shadow: inset #d1d2d4 0.5px 0.5px 20px 0px;
 }
 
-
+.about{
+  background-color: rgba(101, 112, 117, 0.8);
+  border-radius: 25px;
+}
 
 ::placeholder { 
   opacity: 0.5;
@@ -248,8 +252,13 @@ li{
 
 .main-body{
   margin-top:3%;
-  margin-bottom: 15%;
   padding-bottom: 20px;
+  padding-bottom: 80px;
+}
+
+.main {
+  min-height: 100vh;
+  position: relative;
 }
 
 .logged-in-nav{
@@ -257,16 +266,20 @@ li{
 }
 
 .footer-copyright{
-  position: relative;
+  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  margin-top: 120px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
   width: 100%;
   height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.orange {
+  background-color: #ff9800 !important;
+  opacity: 0.8;
 }
 
 /* Hover disabled until we have it linked to user profile */
@@ -455,3 +468,15 @@ li{
       }
     }
   }
+
+.modal {
+  text-align: center;
+}
+
+.modal .modal-footer {
+  text-align: center;
+}
+
+.modal-content {
+  font-size: 20px;
+}
