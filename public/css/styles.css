@@ -57,7 +57,8 @@ align-content: center;
 }
 
 .post{
-  background-color:  rgba(236, 184, 62, 0.685);
+  background-color: #ebbb4a;
+  opacity: 0.8;
   box-shadow: inset #d1d2d4 0.5px 0.5px 20px 0px;
 }
 
@@ -280,6 +281,11 @@ li{
   height: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.orange {
+  background-color: #ff9800 !important;
+  opacity: 0.8;
 }
 
 /* Hover disabled until we have it linked to user profile */
