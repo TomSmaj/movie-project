@@ -9,7 +9,7 @@ function displayMovieInfo() {
   const start = $("#start-date").val();
   const end = $("#end-date").val();
   const apiKey = process.env.OMDB_KEY;
-  var reqString = "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
+  var reqString = "https://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
   if (date !== "") {
     reqString += "&y=" + date;
   }
