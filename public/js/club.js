@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable quotes */
 $(document).ready(function() {
   console.log("card page ready");
@@ -36,8 +37,13 @@ $("#add_club_btn").on("click", function(e) {
     description: new_descr.val().trim(),
     admin: new_admin
   };
-
-  newClub(createClub);
+  if (createClub.name === "" || createClub.description === "") {
+    $("#invalidAlert").removeClass("hide");
+    return false;
+  } else {
+    newClub(createClub);
+    return true;
+  }
 });
 
 function newClub(newClubName) {
@@ -50,3 +56,16 @@ function newClub(newClubName) {
     }
   });
 }
+
+// function checkInput(event) {
+//   event.preventDefault();
+//   let new_club_description = $("#new_club_description").val();
+//   let new_club = $("#new_club").val();
+//   if (new_club_description === "" && new_club === "") {
+//     $("#invalidAlert").removeClass("hide");
+//     return false;
+//   } else {
+//     return true;
+//   }
+
+// }
