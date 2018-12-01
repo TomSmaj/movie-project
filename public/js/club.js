@@ -29,7 +29,7 @@ if (sessionStorage.getItem("loggedInUser")) {
   new_admin = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
 }
 
-$("#add_club_btn").on("click", function(e) {
+$("#add_club_btn").on("mousedown", function(e) {
   e.preventDefault();
 
   var createClub = {
@@ -39,14 +39,13 @@ $("#add_club_btn").on("click", function(e) {
   };
   if (createClub.name === "" || createClub.description === "") {
     $("#invalidAlert").removeClass("hide");
-    return false;
   } else {
     newClub(createClub);
-    return true;
   }
 });
 
 function newClub(newClubName) {
+  console.log("making club post request");
   $.ajax({
     type: "POST",
     url: "/api/clubs/",
