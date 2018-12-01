@@ -1,4 +1,4 @@
-require("dotenv").config();
+//require("dotenv").config();
 
 // This part calls the OMDB API and populates the modal
 var clubId = "";
@@ -10,7 +10,8 @@ function displayMovieInfo() {
   const discTitle = $("#discussion-title").val();
   const start = $("#start-date").val();
   const end = $("#end-date").val();
-  const apiKey = process.env.OMDB_KEY;
+  //const apiKey = process.env.OMDB_KEY;
+  const apiKey = "trilogy";
   var reqString = "https://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
   if (date !== "") {
     reqString += "&y=" + date;
