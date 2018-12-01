@@ -61,7 +61,10 @@ align-content: center;
   box-shadow: inset #d1d2d4 0.5px 0.5px 20px 0px;
 }
 
-
+.about{
+  background-color: rgba(101, 112, 117, 0.8);
+  border-radius: 25px;
+}
 
 ::placeholder { 
   opacity: 0.5;
