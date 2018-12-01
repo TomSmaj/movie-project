@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = function(app) {
-  app.post("/api/user/", (req, res) => {
+  app.post("/api/user/", req => {
     db.User.findOne({
       where: { userId: req.body.userId }
     }).then(dbUser => {

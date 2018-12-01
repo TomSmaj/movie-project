@@ -1,4 +1,5 @@
 // This part calls the OMDB API and populates the modal
+
 var clubId = "";
 
 function displayMovieInfo() {
@@ -8,13 +9,22 @@ function displayMovieInfo() {
   const discTitle = $("#discussion-title").val();
   const start = $("#start-date").val();
   const end = $("#end-date").val();
-  const OMDB_KEY = "trilogy";
-  const apiKey = OMDB_KEY;
-  var reqString = "https://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
+  var reqString = "https://www.omdbapi.com/?apikey=trilogy&t=" + movie;
   if (date !== "") {
     reqString += "&y=" + date;
   }
 
+  if (
+    movie === "" ||
+    discussion === "" ||
+    discTitle === "" ||
+    start === "" ||
+    end === ""
+  ) {
+    $("#modal1").modal();
+    console.log("hello");
+    $("#invalidAlert").removeClass("hide");
+  }
   console.log(reqString);
 
   $.ajax({
