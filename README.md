@@ -29,6 +29,14 @@ Filtering of pages
 * Cristina Kernan - routing 
 * Meg Gallagher - handlebars & front end
 
-## Wanna check it out for yourself? Click this link!! => ![https://reel-talk-app.herokuapp.com]
+### Techonology Used
+* Node.js and Express
+* HTML/CSS/Materialize
+* Javascript
+* MySQL
+* Sequelize
+* Heroku
+
+## Wanna check it out for yourself? Click (https://reel-talk-app.herokuapp.com) "here"!!
 
 ![reel-talk](/public/images/ReelTalk.gif)
