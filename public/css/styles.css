@@ -63,8 +63,14 @@ align-content: center;
 }
 
 .about{
+  padding:3%;
   background-color: rgba(101, 112, 117, 0.8);
   border-radius: 25px;
+}
+
+#about-heading{
+  text-align: center;
+  font-family: 'Limelight', cursive;
 }
 
 ::placeholder { 
