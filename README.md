@@ -37,6 +37,6 @@ Filtering of pages
 * Sequelize
 * Heroku
 
-## Wanna check it out for yourself? Click (https://reel-talk-app.herokuapp.com) "here"!!
+## Wanna check it out for yourself? Click ![here!!](https://reel-talk-app.herokuapp.com)
 
 ![reel-talk](/public/images/ReelTalk.gif)
