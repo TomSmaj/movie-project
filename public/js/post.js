@@ -5,7 +5,7 @@ $(document).ready(function() {
 var title = $("#post_title");
 var text = $("#post_text");
 var discussionId = $("#discussion_id");
-var poster = "none";
+var poster = "Anonymous";
 if (sessionStorage.getItem("loggedInUser")) {
   poster = JSON.parse(sessionStorage.getItem("loggedInUser")).username;
 }

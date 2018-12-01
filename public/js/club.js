@@ -39,8 +39,10 @@ $("#add_club_btn").on("mousedown", function(e) {
   };
   if (createClub.name === "" || createClub.description === "") {
     $("#invalidAlert").removeClass("hide");
+    return;
   } else {
     newClub(createClub);
+    return;
   }
 });
 
