@@ -9,6 +9,13 @@ p{
   font-family: 'Quicksand', sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
+#invalidAlert {
+  color: red;
+}
 .icon-block .material-icons {
   font-size: inherit;
 }
@@ -63,8 +70,27 @@ align-content: center;
 }
 
 .about{
-  background-color: rgba(101, 112, 117, 0.8);
+  padding:3%;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 25px;
+}
+
+#about-heading{
+  text-align: center;
+  font-family: 'Limelight', cursive;
+  margin-bottom: 0;
+}
+
+#about_sub{
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5;
+  padding-bottom: 35px;
+  margin-top: 0;
+}
+
+#about_para{
+  font-size: 22px;
 }
 
 ::placeholder { 
@@ -239,7 +265,7 @@ li{
 }
 
 #logo-container{
-  margin-left: 15%;
+  margin: 0px;
 }
 
 #navbar{
@@ -479,4 +505,8 @@ li{
 
 .modal-content {
   font-size: 20px;
+}
+
+.sidenav {
+  padding: 20px;
 }
