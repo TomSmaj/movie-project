@@ -47,4 +47,21 @@ db.sequelize.sync(syncOptions).then(() => {
   });
 });
 
+db.User.destroy({
+  where: {},
+  truncate: true
+});
+db.Post.destroy({
+  where: {},
+  truncate: true
+});
+db.Discussion.destroy({
+  where: {},
+  truncate: true
+});
+db.Club.destroy({
+  where: {},
+  truncate: true
+});
+
 module.exports = app;
