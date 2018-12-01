@@ -32,23 +32,4 @@ module.exports = function(app) {
       res.json(dbClub);
     });
   });
-
-  app.get("/delete/all", (req, res) => {
-    db.User.destroy({
-      where: {},
-      truncate: true
-    });
-    db.Post.destroy({
-      where: {},
-      truncate: true
-    });
-    db.Discussion.destroy({
-      where: {},
-      truncate: true
-    });
-    db.Club.destroy({
-      where: {},
-      truncate: true
-    });
-  });
 };
