@@ -258,7 +258,7 @@ li{
 }
 
 #logo-container{
-  margin-left: 15%;
+  margin: 0px;
 }
 
 #navbar{
@@ -498,4 +498,8 @@ li{
 
 .modal-content {
   font-size: 20px;
+}
+
+.sidenav {
+  padding: 20px;
 }
