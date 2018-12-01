@@ -22,10 +22,10 @@ to the club page and selecting the "Create New Discussion" button beneath the li
 Dedicated profile page for all users   ||   Create administative features for clubs   ||   Filtering of pages
 
 ## Contributors
-* Kathleen Doviken - back end development
-* Thomas Smajstrla - back end development
-* Cristina Kernan - routing 
-* Meg Gallagher - handlebars & front end
+* Kathleen Doviken - OMDB API integration, discussion routes and responsive styling
+* Thomas Smajstrla - Database and models integration and get requests and routes
+* Cristina Kernan - Routing, Google auth integration and styling
+* Meg Gallagher - Handlebars/front-end, user posts and club routes/post requests
 
 ### Techonology Used
 * Node.js and Express
