@@ -19,7 +19,7 @@ link found on the navbar, and can create new discussions within any club they ar
 to the club page and selecting the "Create New Discussion" button beneath the list of discussions.
 
 ## Future Development
-Dedicated profile page for all users || Create administative features for clubs || Filtering of pages
+Dedicated profile page for all users   ||   Create administative features for clubs   ||   Filtering of pages
 
 ## Contributors
 * Kathleen Doviken - back end development
