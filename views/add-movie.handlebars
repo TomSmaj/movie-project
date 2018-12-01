@@ -1,8 +1,23 @@
 {{!-- Add a new movie to discuss. This happens when you are already on a club's page. Potentially only for
 Moderator/Logged In User --}}
-
+<div>
 <h1 class="heading">New Movie Discussion</h1>
-
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Confirm Movie</h4>
+    <p id="confirm-movie-title"></p>
+    <p id="confirm-movie-year"></p>
+    <p id="confirm-movie-plot"></p>
+    <div class="poster"></div>
+    <p id="confirm-discussion-title"></p>
+    <p id="confirm-discussion"></p>
+    <p id="confirm-start-date"></p>
+    <p id="confirm-end-date"></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" id="add_discussion_btn" class="modal-close waves-effect waves-yellow btn-flat">That's my movie!</a>
+  </div>
+</div>
 
 {{!-- Form to add a new club --}}
 <div class="container form_new_movie">
@@ -28,7 +43,8 @@ Moderator/Logged In User --}}
       <div class="row">
         <div class="input-field col s12">
           <textarea id="movie-description" class="materialize-textarea white-text validate"></textarea>
-          <label for="new_club_description"> Please provide a brief description of what this club will be focusing on
+          <label for="new_club_description"> Please provide a brief description of what this movie discussion will be
+            focusing on
           </label>
         </div>
       </div>
@@ -49,21 +65,4 @@ Moderator/Logged In User --}}
     </button>
   </div>
 </div>
-</div>
-
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Confirm Movie</h4>
-    <p id="confirm-movie-title"></p>
-    <p id="confirm-movie-year"></p>
-    <p id="confirm-movie-plot"></p>
-    <div class="poster"></div>
-    <p id="confirm-discussion-title"></p>
-    <p id="confirm-discussion"></p>
-    <p id="confirm-start-date"></p>
-    <p id="confirm-end-date"></p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" id="add_discussion_btn" class="modal-close waves-effect waves-green btn-flat">That's my movie!</a>
-  </div>
 </div>
