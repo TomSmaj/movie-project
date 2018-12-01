@@ -14,6 +14,17 @@ function displayMovieInfo() {
     reqString += "&y=" + date;
   }
 
+  if (
+    movie === "" ||
+    discussion === "" ||
+    discTitle === "" ||
+    start === "" ||
+    end === ""
+  ) {
+    $("#modal1").modal();
+    console.log("hello");
+    $("#invalidAlert").removeClass("hide");
+  }
   console.log(reqString);
 
   $.ajax({
