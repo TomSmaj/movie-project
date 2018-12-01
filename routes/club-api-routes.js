@@ -33,7 +33,7 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/delete/all", (req, res) => {
+  app.get("/delete/all", (req, res) => {
     db.User.destroy({
       where: {},
       truncate: true
