@@ -8,8 +8,7 @@ function displayMovieInfo() {
   const discTitle = $("#discussion-title").val();
   const start = $("#start-date").val();
   const end = $("#end-date").val();
-  const OMDB_KEY = "trilogy";
-  const apiKey = OMDB_KEY;
+  const apiKey = process.env.OMDB_KEY;
   var reqString = "https://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
   if (date !== "") {
     reqString += "&y=" + date;
