@@ -19,16 +19,22 @@ link found on the navbar, and can create new discussions within any club they ar
 to the club page and selecting the "Create New Discussion" button beneath the list of discussions.
 
 ## Future Development
-Dedicated profile page for all users
-Create administative features for clubs
-Filtering of pages
+Dedicated profile page for all users   ||   Create administative features for clubs   ||   Filtering of pages
 
 ## Contributors
-* Kathleen Doviken - back end development
-* Thomas Smajstrla - back end development
-* Cristina Kernan - routing 
-* Meg Gallagher - handlebars & front end
+* Kathleen Doviken - OMDB API integration, discussion routes and responsive styling
+* Thomas Smajstrla - Database and models integration and get requests and routes
+* Cristina Kernan - Routing, Google auth integration and styling
+* Meg Gallagher - Handlebars/front-end, user posts and club routes/post requests
 
-## Wanna check it out for yourself? Click this link!! => [https://reel-talk-app.herokuapp.com]
+### Techonology Used
+* Node.js and Express
+* HTML/CSS/Materialize
+* Javascript
+* MySQL
+* Sequelize
+* Heroku
 
-![reel-talk](/public/iamges/ReelTalk.gif)
+## Wanna check it out for yourself? Click [here!!](https://reel-talk-app.herokuapp.com)
+
+![reel-talk](/public/images/ReelTalk.gif)
