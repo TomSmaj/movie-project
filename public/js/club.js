@@ -55,16 +55,3 @@ function newClub(newClubName) {
     }
   });
 }
-
-// function checkInput(event) {
-//   event.preventDefault();
-//   let new_club_description = $("#new_club_description").val();
-//   let new_club = $("#new_club").val();
-//   if (new_club_description === "" && new_club === "") {
-//     $("#invalidAlert").removeClass("hide");
-//     return false;
-//   } else {
-//     return true;
-//   }
-
-// }
