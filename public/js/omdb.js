@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // This part calls the OMDB API and populates the modal
 var clubId = "";
 
