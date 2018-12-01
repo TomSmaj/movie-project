@@ -9,6 +9,13 @@ p{
   font-family: 'Quicksand', sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
+#invalidAlert {
+  color: red;
+}
 .icon-block .material-icons {
   font-size: inherit;
 }
