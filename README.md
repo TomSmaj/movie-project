@@ -29,6 +29,6 @@ Filtering of pages
 * Cristina Kernan - routing 
 * Meg Gallagher - handlebars & front end
 
-## Wanna check it out for yourself? Click this link!! => [https://reel-talk-app.herokuapp.com]
+## Wanna check it out for yourself? Click this link!! => ![https://reel-talk-app.herokuapp.com]
 
-![reel-talk](/public/iamges/ReelTalk.gif)
+![reel-talk](/public/images/ReelTalk.gif)
